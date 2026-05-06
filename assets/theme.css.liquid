@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* cache-bust 2026-05-06 20:20 footer copyright left + hide powered-by */
+/* cache-bust 2026-05-06 20:25 footer copyright align + mobile padding */
 /*!
   Impulse, by Archetype Themes
   http://archetypethemes.co
@@ -9353,13 +9353,25 @@ html[dir=rtl] .background-media-text__text{
     }
 }
 
-/* Footer: ocultar "Tecnología de Shopify" y alinear copyright a la izquierda */
+/* Footer: ocultar "Tecnología de Shopify" + alinear copyright + padding mobile */
 .footer__small-text:has(a[href*="utm_campaign=poweredby"]) {
   display: none !important;
 }
-.footer__aside-item--copyright,
-.footer__aside-item--copyright .footer__small-text {
-  text-align: left !important;
+/* Desktop: copyright a la izquierda */
+@media (min-width: 769px) {
+  .footer__aside-item--copyright,
+  .footer__aside-item--copyright .footer__small-text {
+    text-align: left !important;
+  }
+}
+/* Mobile: separar copyright del borde inferior */
+@media (max-width: 768px) {
+  .site-footer .footer__aside {
+    padding-bottom: 32px !important;
+  }
+  .site-footer .footer__wrapper {
+    padding-bottom: 24px !important;
+  }
 }
 
 /* Mobile: keep announcement text on a single line */
