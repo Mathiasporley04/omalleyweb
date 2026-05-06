@@ -5,7 +5,24 @@
   if section.settings.image != blank and section.settings.image2 == blank
     assign overlap_images = false
   endif
+  assign dark_theme = false
+  if section.settings.theme == 'dark'
+    assign dark_theme = true
+  endif
 -%}
+
+{%- if dark_theme -%}
+  {%- style -%}
+    #shopify-section-{{ section.id }}.shopify-section { background: #000; }
+    #shopify-section-{{ section.id }} .index-section { padding-top: 50px; padding-bottom: 50px; }
+    #shopify-section-{{ section.id }},
+    #shopify-section-{{ section.id }} .feature-row__text,
+    #shopify-section-{{ section.id }} .subheading,
+    #shopify-section-{{ section.id }} .h1,
+    #shopify-section-{{ section.id }} .rte,
+    #shopify-section-{{ section.id }} .rte * { color: #fff !important; }
+  {%- endstyle -%}
+{%- endif -%}
 
 <div class="index-section">
 
@@ -124,13 +141,13 @@
       "type": "text",
       "id": "title",
       "label": "t:sections.text-and-image.settings.title.label",
-      "default": "Image with text"
+      "default": "Imagen con texto"
     },
     {
       "type": "richtext",
       "id": "text",
       "label": "t:sections.text-and-image.settings.text.label",
-      "default": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>"
+      "default": "<p>Combiná texto grande con una imagen para contar una historia, explicar un detalle sobre tu producto o describir una nueva promoción.</p>"
     },
     {
       "type": "text",
@@ -199,6 +216,16 @@
       "id": "divider",
       "label": "t:sections.text-and-image.settings.divider.label",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "theme",
+      "label": "Tema de color",
+      "default": "light",
+      "options": [
+        { "value": "light", "label": "Claro (fondo blanco)" },
+        { "value": "dark",  "label": "Oscuro (fondo negro, letras blancas)" }
+      ]
     }
   ],
   "presets": [
