@@ -1,4 +1,142 @@
 {%- if settings.cart_type == 'drawer' -%}
+  <style>
+    /* O'Malley cart drawer polish — qty box always white with dark text/icons (works on light AND dark drawer themes) */
+    #CartDrawer .js-qty__wrapper {
+      background: #fff !important;
+      border: 1px solid #d4d4d4 !important;
+      border-radius: 6px !important;
+    }
+    #CartDrawer .js-qty__num,
+    #CartDrawer input.js-qty__num,
+    #CartDrawer input[name="updates[]"] {
+      color: #1a1a1a !important;
+      -webkit-text-fill-color: #1a1a1a !important;
+      background: transparent !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    #CartDrawer .js-qty__adjust { color: #1a1a1a !important; }
+    #CartDrawer .js-qty__adjust .icon,
+    #CartDrawer .js-qty__adjust svg path { fill: #1a1a1a !important; }
+    /* Hide drawer rows the user doesn't want */
+    #CartDrawer .cart__discounts { display: none !important; }
+    #CartDrawer .cart__item-row.text-center,
+    #CartDrawer .cart__item-row.text-center small { display: none !important; }
+    #CartDrawer .cart__remove { font-size: 12px; opacity: .7; }
+    #CartDrawer .cart__remove a { font-size: 12px !important; letter-spacing: .03em; text-decoration: underline; text-underline-offset: 2px; }
+    /* Price column — better hierarchy */
+    #CartDrawer .cart__item-price-col { text-align: right; min-width: 120px; }
+    #CartDrawer .cart__price { display: block !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.25 !important; }
+    #CartDrawer .cart__price--strikethrough { display: block !important; font-size: 13px !important; font-weight: 400 !important; opacity: .55; text-decoration: line-through; margin: 0 0 2px !important; }
+    #CartDrawer small.cart__discount { display: inline-flex !important; align-items: center; gap: 6px; font-size: 11px !important; font-weight: 700 !important; line-height: 1.2 !important; margin: 6px 0 0 !important; padding: 3px 8px !important; background: #fdebd5 !important; color: #b8530a !important; border-radius: 4px !important; letter-spacing: 0.04em !important; text-transform: uppercase !important; white-space: nowrap; }
+    #CartDrawer small.cart__discount .om-disc-amt { font-size: 11px !important; font-weight: 700 !important; color: #c14a3a !important; -webkit-text-fill-color: #c14a3a !important; opacity: 1 !important; letter-spacing: 0 !important; text-transform: none !important; }
+    #CartDrawer small.cart__discount .om-disc-pct { color: #c14a3a !important; -webkit-text-fill-color: #c14a3a !important; }
+    /* TOTAL row — bold label and value */
+    #CartDrawer .om-cart-total-row { padding: 14px 0 4px !important; }
+    #CartDrawer .om-cart-total-label { font-weight: 800 !important; font-size: 16px !important; letter-spacing: 0.06em !important; color: inherit !important; text-transform: uppercase !important; }
+    #CartDrawer .om-cart-total-value { font-weight: 800 !important; font-size: 18px !important; letter-spacing: 0 !important; color: inherit !important; }
+    #CartDrawer span.cart__discount { background: transparent !important; padding: 0 !important; color: #2a7a3a !important; font-size: 16px !important; font-weight: 700 !important; }
+    @media (max-width: 600px){
+      /* Cart drawer fills viewport on mobile */
+      .drawer--right#CartDrawer,
+      #CartDrawer.drawer--right { width: 100vw !important; right: -100vw !important; max-width: 100vw !important; }
+      .drawer--right.drawer--is-open#CartDrawer,
+      #CartDrawer.drawer--right.drawer--is-open { transform: translateX(-100vw) !important; }
+
+      #CartDrawer .drawer__contents,
+      #CartDrawer .drawer__inner,
+      #CartDrawer .drawer__scrollable { padding-left: 14px !important; padding-right: 14px !important; box-sizing: border-box; }
+
+      /* Item layout */
+      #CartDrawer .cart__item { gap: 10px; padding-bottom: 16px !important; margin-bottom: 16px !important; }
+      #CartDrawer .cart__image { flex: 0 0 78px !important; margin-right: 0 !important; }
+
+      #CartDrawer .cart__item-details { flex: 1 1 0%; min-width: 0; }
+      #CartDrawer .cart__item-title { flex: 1 1 100%; min-width: 0; }
+      #CartDrawer .cart__item-name {
+        font-size: 13px !important;
+        line-height: 1.3 !important;
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+      }
+
+      /* Qty + price row stacks if needed */
+      #CartDrawer .cart__item-sub {
+        gap: 8px 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      #CartDrawer .cart__item-sub > div:first-child { margin-right: 0 !important; flex-shrink: 0; }
+
+      #CartDrawer .js-qty__wrapper {
+        display: inline-block !important;
+        position: relative !important;
+        width: 96px !important;
+        min-width: 96px !important;
+        max-width: 96px !important;
+        height: 36px !important;
+        border: 1px solid #d4d4d4 !important;
+        border-radius: 6px !important;
+        background: #fff !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+      }
+      #CartDrawer .js-qty__num {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 32px !important;
+        margin: 0 !important;
+        text-align: center !important;
+        font-size: 15px !important;
+        background: transparent !important;
+        border: 0 !important;
+        color: #1a1a1a !important;
+        -webkit-text-fill-color: #1a1a1a !important;
+        line-height: 34px !important;
+        box-sizing: border-box !important;
+      }
+      #CartDrawer .js-qty__adjust {
+        position: absolute !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 30px !important;
+        height: 100% !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: 0 !important;
+        color: #1a1a1a !important;
+        fill: #1a1a1a !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      #CartDrawer .js-qty__adjust--minus { left: 0 !important; right: auto !important; }
+      #CartDrawer .js-qty__adjust--plus { right: 0 !important; left: auto !important; }
+      #CartDrawer .js-qty__adjust .icon { width: 10px !important; height: 10px !important; }
+
+      /* Price column: shrink min-width so it fits */
+      #CartDrawer .cart__item-price-col {
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
+        text-align: right !important;
+        white-space: nowrap;
+      }
+      #CartDrawer .cart__price { font-size: 14px !important; }
+      #CartDrawer .cart__price--strikethrough { font-size: 11px !important; }
+      #CartDrawer small.cart__discount {
+        font-size: 10px !important;
+        padding: 2px 6px !important;
+        margin-top: 4px !important;
+        white-space: nowrap;
+      }
+
+      /* Header: smaller title */
+      #CartDrawer .drawer__title,
+      #CartDrawer .h2.drawer__title { font-size: 18px !important; line-height: 1.2 !important; }
+    }
+  </style>
   <div id="CartDrawer" class="drawer drawer--right">
     <form id="CartDrawerForm" action="{{ routes.cart_url }}" method="post" novalidate class="drawer__contents">
       <div class="drawer__fixed-header">
@@ -33,7 +171,7 @@
                 <div class="text-right">
                   {% for cart_discount in cart.cart_level_discount_applications %}
                     <div class="cart__discount">
-                      {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money }})
+                      {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money_without_trailing_zeros }})
                     </div>
                   {% endfor %}
                 </div>
@@ -41,9 +179,9 @@
             {% endif %}
           </div>
 
-          <div class="cart__item-sub cart__item-row">
-            <div class="ajaxcart__subtotal">{{ 'cart.general.subtotal' | t }}</div>
-            <div data-subtotal>{{ cart.total_price | money }}</div>
+          <div class="cart__item-sub cart__item-row om-cart-total-row">
+            <div class="ajaxcart__subtotal om-cart-total-label">TOTAL</div>
+            <div data-subtotal class="om-cart-total-value">{{ cart.total_price | money_without_trailing_zeros }}</div>
           </div>
 
           <div class="cart__item-row text-center">
@@ -84,4 +222,91 @@
       </div>
     </form>
   </div>
+  <script>
+    (function(){
+      var DISCOUNT_LABELS = { 'Descuento1':'15% OFF','Descuento2':'20% OFF','Descuento3':'20% OFF' };
+      var observer = null;
+      var inTransform = false;
+      function transformDiscounts(){
+        if (inTransform) return;
+        inTransform = true;
+        try {
+          if (observer) observer.disconnect();
+          var cols = document.querySelectorAll('#CartDrawer .cart__item-price-col');
+          cols.forEach(function(col){
+            var groups = {};
+            col.querySelectorAll('small.cart__discount').forEach(function(el){
+              if (el.dataset.omProcessed === '1') {
+                var lbl = el.dataset.omLabel || '';
+                var amt = parseFloat(el.dataset.omAmt || '0') || 0;
+                if (groups[lbl]) {
+                  groups[lbl].amountSum += amt;
+                  el.parentNode && el.parentNode.removeChild(el);
+                } else {
+                  groups[lbl] = { el: el, amountSum: amt };
+                }
+                return;
+              }
+              var raw = (el.textContent || '').trim();
+              var m = raw.match(/^([^(]+?)\s*\((-?[^)]+)\)/);
+              var origTitle = m ? m[1].trim() : raw;
+              var amountStr = m ? m[2].trim() : '';
+              var label = DISCOUNT_LABELS[origTitle] || origTitle;
+              var amtNum = 0;
+              if (amountStr){
+                var clean = amountStr.replace(/[^0-9.,\-]/g,'').replace(/\./g,'').replace(',','.');
+                amtNum = Math.abs(parseFloat(clean) || 0);
+              }
+              if (groups[label]){
+                groups[label].amountSum += amtNum;
+                el.parentNode && el.parentNode.removeChild(el);
+              } else {
+                groups[label] = { el: el, amountSum: amtNum };
+              }
+            });
+            Object.keys(groups).forEach(function(label){
+              var g = groups[label];
+              var formatted = g.amountSum > 0 ? '-$' + Math.round(g.amountSum).toLocaleString('es-UY', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : '';
+              var newHTML = formatted ? '<span class="om-disc-pct">' + label + '</span><span class="om-disc-amt">' + formatted + '</span>' : label;
+              if (g.el.dataset.omLabel !== label || g.el.dataset.omAmt !== String(g.amountSum)) {
+                g.el.innerHTML = newHTML;
+                g.el.dataset.omProcessed = '1';
+                g.el.dataset.omLabel = label;
+                g.el.dataset.omAmt = String(g.amountSum);
+              }
+            });
+          });
+        } catch(e) { console.error('[cart] transform err', e); }
+        finally {
+          inTransform = false;
+          if (observer) {
+            var drawer = document.getElementById('CartDrawer');
+            if (drawer) observer.observe(drawer, { childList: true, subtree: true });
+          }
+        }
+      }
+      function init(){
+        var drawer = document.getElementById('CartDrawer');
+        if (!drawer) return;
+        transformDiscounts();
+        if (typeof MutationObserver !== 'undefined') {
+          observer = new MutationObserver(function(mutations){
+            for (var i = 0; i < mutations.length; i++){
+              var added = mutations[i].addedNodes;
+              for (var j = 0; j < added.length; j++){
+                var n = added[j];
+                if (n.nodeType === 1 && (n.classList && n.classList.contains('cart__discount') || (n.querySelector && n.querySelector('.cart__discount')))){
+                  transformDiscounts();
+                  return;
+                }
+              }
+            }
+          });
+          observer.observe(drawer, { childList: true, subtree: true });
+        }
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+      else init();
+    })();
+  </script>
 {%- endif -%}

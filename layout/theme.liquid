@@ -60,7 +60,7 @@
       dynamicVariantsEnable: true,
       cartType: {{ settings.cart_type | json }},
       isCustomerTemplate: {% if request.page_type contains 'customers/' %}true{% else %}false{% endif %},
-      moneyFormat: {{ shop.money_format | json }},
+      moneyFormat: '{% raw %}${{amount_no_decimals_with_comma_separator}}{% endraw %}',
       saveType: {{ settings.product_save_type | json }},
       productImageSize: {{ settings.product_grid_image_size | json }},
       productImageCover: {{ settings.product_grid_image_fill }},
