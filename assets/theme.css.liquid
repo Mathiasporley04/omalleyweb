@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* cache-bust 2026-05-06 19:55 footer dark */
+/* cache-bust 2026-05-06 20:20 footer copyright left + hide powered-by */
 /*!
   Impulse, by Archetype Themes
   http://archetypethemes.co
@@ -9351,6 +9351,15 @@ html[dir=rtl] .background-media-text__text{
     .announcement-slider.flickity-enabled .announcement-slider__slide{
       display:block;
     }
+}
+
+/* Footer: ocultar "Tecnología de Shopify" y alinear copyright a la izquierda */
+.footer__small-text:has(a[href*="utm_campaign=poweredby"]) {
+  display: none !important;
+}
+.footer__aside-item--copyright,
+.footer__aside-item--copyright .footer__small-text {
+  text-align: left !important;
 }
 
 /* Mobile: keep announcement text on a single line */
