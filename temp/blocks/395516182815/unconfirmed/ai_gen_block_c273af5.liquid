@@ -1,6 +1,155 @@
+{% doc %}
+  @prompt
+    UN BLOQUE CON UNA SOLA IMAGEN
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-single-image-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-single-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    border-radius: {{ block.settings.border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-single-image-img-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-single-image-placeholder-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+
+  .ai-single-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .ai-single-image-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  {% if block.settings.enable_link %}
+    .ai-single-image-link-{{ ai_gen_id }} {
+      display: block;
+      cursor: pointer;
+    }
+  {% endif %}
+{% endstyle %}
+
+<div class="ai-single-image-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-single-image-wrapper-{{ ai_gen_id }}">
+    {% if block.settings.image %}
+      {% if block.settings.enable_link and block.settings.image_link %}
+        <a href="{{ block.settings.image_link }}" class="ai-single-image-link-{{ ai_gen_id }}">
+          <img
+            src="{{ block.settings.image | image_url: width: 2000 }}"
+            alt="{{ block.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+            class="ai-single-image-img-{{ ai_gen_id }}"
+          >
+        </a>
+      {% else %}
+        <img
+          src="{{ block.settings.image | image_url: width: 2000 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+          class="ai-single-image-img-{{ ai_gen_id }}"
+        >
+      {% endif %}
+    {% else %}
+      <div class="ai-single-image-placeholder-{{ ai_gen_id }}">
+        {{ 'image' | placeholder_svg_tag }}
+        <div class="ai-single-image-empty-state-{{ ai_gen_id }}">
+          Selecciona una imagen
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Imagen simple",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Ancho en escritorio",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Radio del borde",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Enlace"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_link",
+      "label": "Habilitar enlace",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "image_link",
+      "label": "URL del enlace"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Imagen simple"
+    }
+  ]
+}
 {% endschema %}
