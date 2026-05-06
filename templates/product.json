@@ -142,7 +142,38 @@
       "type": "text-and-image",
       "settings": {
         "image": "shopify://shop_images/descarga_2.png",
-        "image2": "shopify://shop_images/descarga_1.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Sobre tu marca",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "text_and_image_NtKQdA": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/descarga_2.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Sobre tu marca",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "text_and_image_CkQcKN": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/descarga_2.png",
         "image_width": 700,
         "subtitle": "",
         "title": "Sobre tu marca",
@@ -157,21 +188,6 @@
     },
     "1778101271864c9b3e": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5c682cc_Aq9NyE": {
-          "type": "ai_gen_block_5c682cc",
-          "settings": {
-            "image": "shopify://shop_images/descarga_3.png",
-            "aspect_ratio": "3/4",
-            "border_radius": 0,
-            "desktop_width_percent": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5c682cc_Aq9NyE"
-      ],
       "settings": {}
     },
     "testimonials": {
@@ -252,6 +268,8 @@
     "sub",
     "1778097604a19c3c86",
     "text-and-image",
+    "text_and_image_NtKQdA",
+    "text_and_image_CkQcKN",
     "1778101271864c9b3e",
     "testimonials",
     "product-recommendations",
