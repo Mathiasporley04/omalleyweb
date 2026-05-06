@@ -5,6 +5,285 @@
   endif
 -%}
 
+{%- style -%}
+  /* O'Malley product page customizations */
+
+  /* Bold product title (force heavy weight on iOS — antialiased was making it look thin) */
+  .product-single__title {
+    font-weight: 900 !important;
+    -webkit-font-smoothing: auto !important;
+    -moz-osx-font-smoothing: auto !important;
+    text-rendering: optimizeLegibility;
+  }
+  @media only screen and (max-width: 768px) {
+    .product-single__title {
+      font-weight: 900 !important;
+      -webkit-text-stroke: 0.4px currentColor;
+    }
+  }
+
+  /* Hide static price block (bundle shows its own prices) */
+  .product-block.product-block--price {
+    display: none !important;
+  }
+
+  /* Hide default sales points (Envío gratis / En stock) */
+  .product-block.product-block--sales-point {
+    display: none !important;
+  }
+
+  /* Hide duplicate stock indicator inside product description (below bundle) */
+  .stock-scarcity-container {
+    display: none !important;
+  }
+
+  /* Uniform 10px spacing between bundle option cards (replaces per-card margins) */
+  .newpackbundlebox_p {
+    gap: 10px !important;
+    row-gap: 10px !important;
+  }
+  .newpackbundlebox {
+    position: relative;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Force bold on bundle prices (iOS was rendering them light) */
+  .newbundleprice .bundlenewprice,
+  .newbundleprice .bundleoldprice,
+  .gift_totla_price,
+  .gift_totla_price strong {
+    font-weight: 900 !important;
+    -webkit-font-smoothing: auto !important;
+    -moz-osx-font-smoothing: auto !important;
+    text-rendering: optimizeLegibility;
+  }
+  .newbundleprice .bundlenewprice {
+    -webkit-text-stroke: 0.4px currentColor;
+  }
+  .newbundleprice .bundleoldprice {
+    font-weight: 700 !important;
+  }
+
+  /* Best Seller card — shift the title row down (badge breathing room) without altering layout */
+  .newpackbundlebox:has(> .bestsellertag.bestvalll) > .newdesign_bundle {
+    transform: translateY(15px) !important;
+  }
+  .bestsellertag.bestvalll {
+    z-index: 2;
+  }
+
+  /* Gift row "Gratis $980" — center the price block and the strike-through */
+  .single_fee_product_price {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .extra_fee_products .single_product_price_in {
+    color: #1a1a1a !important;
+    opacity: 0.65 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-decoration: line-through !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    white-space: nowrap !important;
+  }
+  .extra_fee_products .free_ppt_tag {
+    flex-shrink: 0 !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .newpackbundlebox:has(> .bestsellertag.bestvalll) > .newdesign_bundle {
+      transform: translateY(18px) !important;
+    }
+    .extra_fee_products .single_product_price_in {
+      font-size: 13px !important;
+    }
+    .free_ppt_tag {
+      font-size: 12px !important;
+      padding: 3px 8px !important;
+    }
+  }
+
+  /* Custom stock indicator above bundle selector */
+  .om-stock-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    color: #1a1a1a;
+    margin: 18px 0 6px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .om-stock-indicator .om-stock-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #1faa3e;
+    display: inline-block;
+    flex-shrink: 0;
+    animation: om-pulse-green 1.6s ease-out infinite;
+  }
+  @keyframes om-pulse-green {
+    0%   { box-shadow: 0 0 0 0 rgba(31, 170, 62, 0.55); }
+    70%  { box-shadow: 0 0 0 8px rgba(31, 170, 62, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(31, 170, 62, 0); }
+  }
+  .om-stock-indicator .om-stock-ready {
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  .om-stock-indicator .om-stock-sep {
+    color: #999;
+    margin: 0 2px;
+  }
+  .om-stock-indicator .om-stock-label {
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+  .om-stock-indicator .om-stock-bars {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+  }
+  .om-stock-indicator .om-stock-bar {
+    width: 14px;
+    height: 14px;
+    background: #e2e2e2;
+    border-radius: 2px;
+    display: inline-block;
+  }
+  .om-stock-indicator .om-stock-bar--filled {
+    background: #c14a3a;
+    animation: om-pulse-red 1.6s ease-out infinite;
+  }
+  .om-stock-indicator .om-stock-status {
+    color: #c14a3a;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    animation: om-glow-red 1.6s ease-in-out infinite;
+  }
+  @keyframes om-pulse-red {
+    0%   { box-shadow: 0 0 0 0 rgba(193, 74, 58, 0.55); }
+    70%  { box-shadow: 0 0 0 6px rgba(193, 74, 58, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(193, 74, 58, 0); }
+  }
+  @keyframes om-glow-red {
+    0%, 100% { text-shadow: 0 0 0 rgba(193, 74, 58, 0); opacity: 1; }
+    50%      { text-shadow: 0 0 8px rgba(193, 74, 58, 0.55); opacity: 0.92; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .om-stock-indicator .om-stock-dot,
+    .om-stock-indicator .om-stock-bar--filled,
+    .om-stock-indicator .om-stock-status {
+      animation: none !important;
+    }
+  }
+
+  /* Mobile: hide the magnifier button (lupita) — clicking the image itself opens the preview */
+  @media only screen and (max-width: 768px) {
+    .product__photo-zoom { display: none !important; }
+    .photoswipe__image { cursor: zoom-in; }
+    .product-image-main .image-wrap { cursor: zoom-in; }
+  }
+
+  /* Add to cart button: black bg, white text + subtle up/down bounce */
+  .btn.add-to-cart,
+  button[name="add"],
+  button[data-add-to-cart],
+  button#addToCartButton {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #000 !important;
+    font-size: 20px !important;
+    letter-spacing: 0.08em !important;
+    padding: 18px 24px !important;
+    animation: om-btn-bounce 2.2s ease-in-out infinite;
+    will-change: transform;
+  }
+  @keyframes om-btn-bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-4px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .btn.add-to-cart,
+    button[name="add"],
+    button[data-add-to-cart],
+    button#addToCartButton {
+      animation: none !important;
+    }
+  }
+  .btn.add-to-cart:hover,
+  button[name="add"]:hover,
+  button[data-add-to-cart]:hover,
+  button#addToCartButton:hover {
+    background-color: #1a1a1a !important;
+    color: #fff !important;
+  }
+  .btn.add-to-cart span,
+  button[name="add"] span,
+  button[data-add-to-cart] span {
+    color: #fff !important;
+  }
+{%- endstyle -%}
+
+<script>
+  (function() {
+    function injectStockIndicator() {
+      var bundle = document.querySelector('.choosebundle');
+      if (!bundle || document.querySelector('.om-stock-indicator')) return;
+      var indicator = document.createElement('div');
+      indicator.className = 'om-stock-indicator';
+      indicator.innerHTML =
+        '<span class="om-stock-dot"></span>' +
+        '<span class="om-stock-ready">Listo para envío</span>' +
+        '<span class="om-stock-sep">|</span>' +
+        '<span class="om-stock-label">Stock:</span>' +
+        '<span class="om-stock-bars">' +
+          '<span class="om-stock-bar om-stock-bar--filled"></span>' +
+          '<span class="om-stock-bar"></span>' +
+          '<span class="om-stock-bar"></span>' +
+          '<span class="om-stock-bar"></span>' +
+        '</span>' +
+        '<span class="om-stock-status">BAJO</span>';
+      bundle.parentNode.insertBefore(indicator, bundle);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', injectStockIndicator);
+    } else {
+      injectStockIndicator();
+    }
+
+    /* Mobile: tapping the product image opens the PhotoSwipe lightbox (replacing the hidden lupita button) */
+    function bindMobileImageZoom() {
+      if (!window.matchMedia('(max-width: 768px)').matches) return;
+      document.addEventListener('click', function(e) {
+        var img = e.target.closest('.photoswipe__image');
+        if (!img) return;
+        var slide = img.closest('.product-main-slide, .image-wrap');
+        if (!slide) return;
+        var btn = slide.querySelector('.js-photoswipe__zoom');
+        if (!btn) {
+          var parent = slide.closest('[data-product-image-main]') || slide.parentNode;
+          if (parent) btn = parent.querySelector('.js-photoswipe__zoom');
+        }
+        if (btn) {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    }
+    bindMobileImageZoom();
+  })();
+</script>
+
 {%- render 'product-template',
   product: product,
   section_id: section.id,
@@ -322,7 +601,7 @@
       "type": "text",
       "id": "text",
       "label": "t:product_block.sales_point.settings.text.label",
-      "default": "Free worldwide shipping"
+      "default": "Envío gratis a todo el mundo"
     }
   ]
 },
@@ -333,7 +612,7 @@
     {
       "type": "text",
       "id": "text",
-      "default": "Text block",
+      "default": "Bloque de texto",
       "label": "t:product_block.text.settings.text.label"
     }
   ]
@@ -357,13 +636,13 @@
       "type": "text",
       "id": "title",
       "label": "t:product_block.tab.settings.title.label",
-      "default": "Shipping information"
+      "default": "Información de envío"
     },
     {
       "type": "richtext",
       "id": "content",
       "label": "t:product_block.tab.settings.content.label",
-      "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
+      "default": "<p>Usá pestañas plegables para información más detallada que ayude a tus clientes a tomar decisiones de compra.</p><p>Ej.: políticas de envío y devolución, guías de talles y otras preguntas comunes.</p>"
     },
     {
       "type": "page",
@@ -400,7 +679,7 @@
       "type": "text",
       "id": "title",
       "label": "t:product_block.contact_form.settings.title.label",
-      "default": "Ask a question"
+      "default": "Hacé una pregunta"
     },
     {
       "type": "checkbox",
@@ -417,7 +696,7 @@
       "type": "liquid",
       "id": "code",
       "label": "t:product_block.html.settings.code.label",
-      "default": "<h4>Custom code block</h4><p>Use this advanced section to add custom HTML, app scripts, or liquid.</p>",
+      "default": "<h4>Bloque de código personalizado</h4><p>Usá esta sección avanzada para agregar HTML, scripts de apps o liquid personalizados.</p>",
       "info": "t:product_block.html.settings.code.info"
     }
   ]

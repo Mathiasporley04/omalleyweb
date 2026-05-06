@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* cache-bust 2026-05-06 09:50 */
 /*!
   Impulse, by Archetype Themes
   http://archetypethemes.co
@@ -5088,7 +5089,7 @@ form+.footer__social{
     display:block;
     visibility:visible;
     transform:translateZ(0px);
-    transition:all 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95)
+    transition:transform 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95), opacity 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95), visibility 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95)
 }
 
 .site-nav__dropdown li{
@@ -5127,7 +5128,7 @@ form+.footer__social{
     visibility:visible;
     opacity:1;
     transform:translateZ(0px);
-    transition:all 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95)
+    transition:transform 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95), opacity 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95), visibility 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95)
 }
 
 .site-nav__deep-dropdown:before{
@@ -5468,7 +5469,7 @@ form+.footer__social{
   line-height:1.8;
   transform:none;
   opacity:0;
-  transition:all 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95);
+  transition:transform 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95), opacity 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95);
   transition-delay:0.3s
 }
 
@@ -5916,7 +5917,7 @@ form+.footer__social{
     display:block;
     width:10px;
     height:10px;
-    transition:all 0.1s ease-in
+    transition:transform 0.1s ease-in
   }
 
 @media only screen and (min-width:769px){
@@ -8252,7 +8253,7 @@ html[dir=rtl] .grid-product__content{
 
   [data-aos=overflow__animation]{
     transform:translateX(100vw);
-    transition:all 0.8s cubic-bezier(.25,.46,.45,.94)
+    transition:transform 0.8s cubic-bezier(.25,.46,.45,.94)
   }
 
     [data-aos=overflow__animation].aos-animate{
@@ -8496,7 +8497,7 @@ html[dir=rtl] .grid-product__content{
 
 .collection-item:hover .collection-image{
     transform:scale(1.03);
-    transition:all 0.8s ease
+    transition:transform 0.8s ease
   }
 
 [data-disable-animations=true] .collection-item:hover .collection-image{
@@ -9350,6 +9351,19 @@ html[dir=rtl] .background-media-text__text{
     .announcement-slider.flickity-enabled .announcement-slider__slide{
       display:block;
     }
+}
+
+/* Mobile: keep announcement text on a single line */
+@media only screen and (max-width: 768px) {
+  .announcement-text,
+  .announcement-link-text {
+    white-space: nowrap;
+    letter-spacing: 0.04em !important;
+    font-size: 11px !important;
+  }
+  .announcement-slider__slide {
+    padding: 0 8px;
+  }
 }
 
 .shopify-challenge__container{

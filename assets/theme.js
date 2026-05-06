@@ -1,6 +1,7 @@
 /*
 @license
   Impulse by Archetype Themes (https://archetypethemes.co)
+  cache-bust 2026-05-06 11:15 (zoom 0.65)
   Access unminified JS in assets/theme.js
 
   Use this event listener to run your own JS outside of this file.
@@ -5356,10 +5357,9 @@ lazySizesConfig.expFactor = 4;
             src: el.getAttribute('data-photoswipe-src'),
             w: el.getAttribute('data-photoswipe-width'),
             h: el.getAttribute('data-photoswipe-height'),
-            el: el,
-            initialZoomLevel: 0.5
+            el: el
           }
-  
+
           items.push(item);
         });
   
@@ -5370,7 +5370,7 @@ lazySizesConfig.expFactor = 4;
         var pswpElement = document.querySelectorAll('.pswp')[0];
   
         var options = {
-          allowPanToNext: false,
+          allowPanToNext: true,
           captionEl: false,
           closeOnScroll: false,
           counterEl: false,
@@ -5378,9 +5378,13 @@ lazySizesConfig.expFactor = 4;
           index: index - 1,
           pinchToClose: false,
           preloaderEl: false,
-          scaleMode: 'zoom',
           shareEl: false,
           tapToToggleControls: false,
+          maxSpreadZoom: 2.5,
+          showHideOpacity: true,
+          hideAnimationDuration: 250,
+          showAnimationDuration: 250,
+          getDoubleTapZoom: function(isMouseClick, item) { return 0.65; },
           getThumbBoundsFn: function(index) {
             var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
             var thumbnail = items[index].el;
@@ -5391,6 +5395,21 @@ lazySizesConfig.expFactor = 4;
   
         this.gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         this.gallery.listen('afterChange', this.afterChange.bind(this));
+
+        var gallery = this.gallery;
+        gallery.toggleDesktopZoom = function(point) {
+          var item = gallery.currItem;
+          var fit = item.initialZoomLevel;
+          point = point || { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+          if (gallery.__zoomCycle == null) gallery.__zoomCycle = 0;
+          gallery.__zoomCycle = (gallery.__zoomCycle + 1) % 3;
+          var target = gallery.__zoomCycle === 0 ? fit : (gallery.__zoomCycle === 1 ? 1 : 1.5);
+          gallery.mouseZoomedIn = gallery.__zoomCycle !== 0;
+          gallery.zoomTo(target, point, 333);
+        };
+        gallery.listen('beforeChange', function() { gallery.__zoomCycle = 0; });
+        gallery.listen('close', function() { gallery.__zoomCycle = 0; });
+
         this.gallery.init();
   
         this.preventiOS15Scrolling();
@@ -7219,6 +7238,9 @@ lazySizesConfig.expFactor = 4;
           childVertical: this.cache.thumbSlider.dataset.position === 'beside',
           pageDots: true, // mobile only with CSS
           wrapAround: true,
+          friction: 0.35,
+          selectedAttraction: 0.05,
+          dragThreshold: 4,
           callbacks: {
             onInit: this.onSliderInit.bind(this),
             onChange: this.onSlideChange.bind(this)
