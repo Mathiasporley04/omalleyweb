@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* cache-bust 2026-05-06 20:25 footer copyright align + mobile padding */
+/* cache-bust 2026-05-06 20:30 footer copyright align v2 */
 /*!
   Impulse, by Archetype Themes
   http://archetypethemes.co
@@ -9357,15 +9357,20 @@ html[dir=rtl] .background-media-text__text{
 .footer__small-text:has(a[href*="utm_campaign=poweredby"]) {
   display: none !important;
 }
-/* Desktop: copyright a la izquierda */
-@media (min-width: 769px) {
-  .footer__aside-item--copyright,
-  .footer__aside-item--copyright .footer__small-text {
-    text-align: left !important;
-  }
+/* Copyright a la izquierda (siempre — en mobile centrado se override abajo) */
+.site-footer .footer__aside-item--copyright,
+.site-footer .footer__aside-item--copyright .footer__small-text {
+  text-align: left !important;
 }
-/* Mobile: separar copyright del borde inferior */
+.site-footer .footer__aside {
+  justify-content: space-between !important;
+}
+/* Mobile: copyright centrado + separación del borde inferior */
 @media (max-width: 768px) {
+  .site-footer .footer__aside-item--copyright,
+  .site-footer .footer__aside-item--copyright .footer__small-text {
+    text-align: center !important;
+  }
   .site-footer .footer__aside {
     padding-bottom: 32px !important;
   }
