@@ -90,14 +90,16 @@
             "type": "announcement",
             "settings": {
               "text": "Envío gratis en compras superiores a $2500",
-              "link_text": ""
+              "link_text": "",
+              "link": ""
             }
           },
           "1524770296206": {
             "type": "announcement",
             "settings": {
               "text": "Devolución sin complicaciones",
-              "link_text": ""
+              "link_text": "",
+              "link": ""
             }
           }
         },
@@ -108,15 +110,18 @@
         ],
         "settings": {
           "main_menu_link_list": "main-menu",
+          "mega_menu_images": true,
           "main_menu_alignment": "center-split",
           "header_style": "sticky",
           "sticky_index": false,
           "sticky_collection": false,
           "announcement_compact": true,
-          "toolbar_menu": "top",
+          "announcement_above_header": false,
+          "toolbar_menu": "",
           "toolbar_social": true,
           "show_locale_selector": false,
-          "show_currency_selector": false
+          "show_currency_selector": false,
+          "show_currency_flags": true
         }
       },
       "footer": {
@@ -155,6 +160,9 @@
           "footer-newsletter"
         ],
         "settings": {
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "show_currency_flags": true,
           "show_payment_icons": false,
           "show_copyright": true,
           "copyright_text": ""
@@ -166,13 +174,27 @@
           "reminder-block": {
             "type": "header",
             "disabled": true,
-            "settings": {}
+            "settings": {
+              "reminder_label": "Get 10% off"
+            }
           }
         },
         "block_order": [
           "reminder-block"
         ],
-        "settings": {}
+        "settings": {
+          "mode": false,
+          "disable_for_account_holders": true,
+          "popup_seconds": 5,
+          "popup_days": 30,
+          "popup_title": "Sign up and save",
+          "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.</p>",
+          "image_position": "left",
+          "show_social_icons": false,
+          "enable_newsletter": true,
+          "button_label": "Optional button",
+          "button_link": ""
+        }
       },
       "collection-header": {
         "type": "collection-header",
@@ -181,8 +203,16 @@
           "collection_image_enable": true,
           "parallax": true
         }
+      },
+      "footer-promotions": {
+        "type": "footer-promotions",
+        "settings": {
+          "hide_homepage": false,
+          "image_size": "wide"
+        }
       }
-    }
+    },
+    "content_for_index": []
   },
   "presets": {
     "Modern": {

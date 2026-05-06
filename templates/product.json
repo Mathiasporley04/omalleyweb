@@ -162,7 +162,7 @@
           "type": "ai_gen_block_5c682cc",
           "settings": {
             "image": "shopify://shop_images/descarga_3.png",
-            "aspect_ratio": "16/9",
+            "aspect_ratio": "3/4",
             "border_radius": 0,
             "desktop_width_percent": 100
           },
@@ -236,6 +236,7 @@
     },
     "collection-return": {
       "type": "collection-return",
+      "disabled": true,
       "settings": {}
     },
     "loox-product-reviews-app-section": {
