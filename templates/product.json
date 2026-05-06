@@ -103,18 +103,11 @@
         "product_video_style": "muted"
       }
     },
-    "sub": {
-      "type": "product-full-width",
-      "disabled": true,
-      "settings": {
-        "max_width": true
-      }
-    },
-    "1778097604a19c3c86": {
+    "177810400455c44d50": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_402ba5e_JXbg6m": {
-          "type": "ai_gen_block_402ba5e",
+        "ai_gen_block_8d84561_XdX8Qc": {
+          "type": "ai_gen_block_8d84561",
           "settings": {
             "image": "shopify://shop_images/image-forge-output_2.png",
             "desktop_width_percent": 100,
@@ -122,8 +115,8 @@
           },
           "blocks": {}
         },
-        "ai_gen_block_402ba5e_KCwNBC": {
-          "type": "ai_gen_block_402ba5e",
+        "ai_gen_block_8d84561_3qMCtY": {
+          "type": "ai_gen_block_8d84561",
           "settings": {
             "image": "shopify://shop_images/image-forge-output_6.png",
             "desktop_width_percent": 100,
@@ -133,105 +126,102 @@
         }
       },
       "block_order": [
-        "ai_gen_block_402ba5e_JXbg6m",
-        "ai_gen_block_402ba5e_KCwNBC"
+        "ai_gen_block_8d84561_XdX8Qc",
+        "ai_gen_block_8d84561_3qMCtY"
       ],
       "settings": {}
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
     },
     "text-and-image": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/descarga_2.png",
+        "image": "shopify://shop_images/descarga_1.png",
         "image_width": 700,
-        "subtitle": "",
-        "title": "Sobre tu marca",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "subtitle": "Listo para regalar",
+        "title": "Un regalo para recordar",
+        "text": "<p>Cada set llega en un estuche de madera maciza con cierre. No necesitás envoltorio, ni moño, ni explicación. Lo entregás como viene y la cara del que lo recibe la imaginás vos. Padres, jefes, suegros, padrinos: nadie tiene uno igual.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
         "align_text": "left",
         "layout": "right",
-        "divider": false
+        "divider": false,
+        "theme": "light"
       }
     },
-    "text_and_image_NtKQdA": {
+    "text-and-image2": {
       "type": "text-and-image",
+      "custom_css": [],
       "settings": {
-        "image": "shopify://shop_images/descarga_1.png",
+        "image": "shopify://shop_images/descarga_2.png",
         "image_width": 700,
-        "subtitle": "",
-        "title": "Sobre tu marca",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "subtitle": "Cristal sin plomo, peso real",
+        "title": "El vaso que se siente antes de tomar",
+        "text": "<p>Hay vasos para tomar y vasos para disfrutar. El nuestro es de cristal sin plomo, 280 g por unidad, base gruesa y capacidad de 300 ml. Pesa lo que tiene que pesar. Apoyás el vaso en la mesa y suena como tiene que sonar. El whisky empieza ahí.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
         "align_text": "left",
         "layout": "left",
-        "divider": false
+        "divider": false,
+        "theme": "light"
       }
     },
-    "text_and_image_CkQcKN": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/descarga_3.png",
-        "image_width": 700,
-        "subtitle": "",
-        "title": "Sobre tu marca",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "divider": false
-      }
-    },
-    "1778101271864c9b3e": {
+    "1778107452eb4d1233": {
       "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_abd0d1f_A9pac9": {
+          "type": "ai_gen_block_abd0d1f",
+          "settings": {
+            "image": "shopify://shop_images/image-forge-output_10.png",
+            "desktop_width_percent": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_abd0d1f_A9pac9"
+      ],
       "settings": {}
     },
-    "testimonials": {
-      "type": "testimonials",
+    "17781042648effaa4b": {
+      "type": "apps",
       "blocks": {
-        "testimonials-0": {
-          "type": "testimonial",
+        "loox_reviews_loox_dynamic_carousel_3QFDVy": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-carousel/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
-          }
-        },
-        "testimonials-1": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
-          }
-        },
-        "testimonials-2": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
+            "corner-radius": 40,
+            "items-per-view": 2,
+            "items-per-view-mobile": 3,
+            "max-characters": 180,
+            "autoplay": false,
+            "autoplay-delay": 5,
+            "main-color": "#ae8868",
+            "stars-color": "#ff8d00",
+            "show-review-text": true,
+            "text-color": "",
+            "reviewer-name-color": "",
+            "verified-badge-color": "",
+            "quote-marks-icon": "style-1",
+            "quote-marks-icon-color": "",
+            "review-background-color": "",
+            "product-ids": ""
           }
         }
       },
       "block_order": [
-        "testimonials-0",
-        "testimonials-1",
-        "testimonials-2"
+        "loox_reviews_loox_dynamic_carousel_3QFDVy"
       ],
       "settings": {
-        "title": "Testimonials",
-        "align_text": "center",
-        "round_images": true,
-        "color_background": "#f9f9f9",
-        "color_text": "#1c1d1d"
+        "full_width": false,
+        "space_around": true
       }
     },
     "product-recommendations": {
@@ -239,7 +229,7 @@
       "disabled": true,
       "settings": {
         "show_product_recommendations": true,
-        "product_recommendations_heading": "You may also like",
+        "product_recommendations_heading": "También te puede gustar",
         "related_count": 5
       }
     },
@@ -252,7 +242,6 @@
     },
     "collection-return": {
       "type": "collection-return",
-      "disabled": true,
       "settings": {}
     },
     "loox-product-reviews-app-section": {
@@ -265,13 +254,12 @@
   },
   "order": [
     "main",
+    "177810400455c44d50",
     "sub",
-    "1778097604a19c3c86",
     "text-and-image",
-    "text_and_image_NtKQdA",
-    "text_and_image_CkQcKN",
-    "1778101271864c9b3e",
-    "testimonials",
+    "text-and-image2",
+    "1778107452eb4d1233",
+    "17781042648effaa4b",
     "product-recommendations",
     "recently-viewed",
     "collection-return",
