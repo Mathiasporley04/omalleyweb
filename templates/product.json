@@ -16,14 +16,47 @@
           "type": "price",
           "settings": {}
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
+        "separator": {
+          "type": "separator",
           "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "globe",
+            "text": "Envío gratis a todo el mundo"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
         },
         "custom_bundle": {
           "type": "custom",
           "settings": {
             "code": "<h4 class=\"choosebundle\"><strong>— Elegí tu bundle —</strong></h4> <p class=\"bundle_bot\">Llevá 2 <strong>15% OFF</strong> | Llevá 3 <strong>20% OFF + 2 VASOS DE REGALO 🎁</strong></p> <div class=\"newpackbundlebox_p mixpackbundlevariant\"> <label class=\"newpackbundlebox\" for=\"om-bundle-1\"> <input type=\"radio\" id=\"om-bundle-1\" checked=\"\" value=\"1\" name=\"om-bundle\"> <div class=\"newdesign_bundle\"> <div class=\"bundleglassicon\"> <img src=\"//tsukiglass.com/cdn/shop/files/TinyBundle2BIGTransperent.png?v=1725191212\" alt=\"\" width=\"80\" height=\"73\"> </div> <div class=\"bundleglassicontitle\"> <h3><div class=\"metafield-rich_text_field\"><p><strong>Llevá 1</strong></p></div></h3> <p>Total 1 set O'Malley</p> </div> <div class=\"newbundleprice\"> <div class=\"bundlenewprice\">$1.490</div> <div class=\"bundleoldprice\"></div> </div> </div> </label> <label class=\"newpackbundlebox\" for=\"om-bundle-2\"> <input type=\"radio\" id=\"om-bundle-2\" value=\"2\" name=\"om-bundle\"> <div class=\"bestsellertag\"></div> <div class=\"newdesign_bundle\"> <div class=\"bundleglassicon\"> <img src=\"//tsukiglass.com/cdn/shop/files/TinyBundle2BIGTransperent.png?v=1725191212\" alt=\"\" width=\"80\" height=\"73\"> </div> <div class=\"bundleglassicontitle\"> <h3><div class=\"metafield-rich_text_field\"><p><strong>Llevá 2 — </strong>15% OFF</p></div></h3> <p>Total 2 sets O'Malley</p> </div> <div class=\"newbundleprice\"> <div class=\"bundlenewprice\">$2.533</div> <div class=\"bundleoldprice\">$2.980</div> </div> </div> </label> <label class=\"newpackbundlebox\" for=\"om-bundle-3\"> <input type=\"radio\" id=\"om-bundle-3\" value=\"3\" name=\"om-bundle\"> <div class=\"bestsellertag bestvalll\">Best Seller</div> <div class=\"newdesign_bundle\"> <div class=\"bundleglassicon\"> <img src=\"//tsukiglass.com/cdn/shop/files/TinyBundle2BIGTransperent.png?v=1725191212\" alt=\"\" width=\"80\" height=\"73\"> </div> <div class=\"bundleglassicontitle\"> <h3><div class=\"metafield-rich_text_field\"><p><strong>LLEVÁ 3 — </strong>20% OFF +<strong> 2 VASOS GRATIS</strong></p></div></h3> <p>Total 3 sets + regalo de cata</p> </div> <div class=\"newbundleprice\"> <div class=\"bundlenewprice\">$3.576</div> <div class=\"bundleoldprice\">$4.470</div> </div> </div> <div class=\"extra_fee_products\"> <div class=\"single_fee_product\"> <div class=\"single_fee_product_img\"> <img src=\"//tsukiglass.com/cdn/shop/files/2Mystery_small.webp?v=1762421411\" alt=\"\"> </div> <div class=\"single_fee_product_title\">2 Vasos Misteriosos Exclusivos</div> <div class=\"single_fee_product_price\"> <div class=\"free_ppt_tag\">Gratis</div> <div class=\"single_product_price_in\">$980</div> </div> </div> <div class=\"gift_totla_price\">Total <strong>$980 en regalos</strong></div> </div> </label> </div> <style> /* ---- Tsuki literal inline styles (verbatim from paste) ---- */ .newpackbundlebox_p.mixpackbundlevariant { gap: 20px; } .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox { width: 100%; padding: 15px; } .newpackbundlebox_p .newpackbundlebox:before { left: 5px; right: unset; bottom: unset; width: 11px; height: 11px; border: 0.8px solid black; top: 50px; } .newpackbundlebox_p .newpackbundlebox.active:before { width: 10px; height: 10px; bottom: unset; left: 6px; outline: 3px solid #F5DBC1; border: 1px solid #e2ac78; } .newdesign_bundle { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; } .newdesign_bundle .bundleglassicon { margin: 0; width: 20%; padding-left: 20px; max-width: unset; } .bundleglassicontitle { width: 65%; text-align: left; padding-left: 20px; padding-right: 20px; } .newdesign_bundle .newbundleprice { margin: 0; width: 15%; } .newpackbundlebox .bundleglassicontitle h3 { margin: 0; } .newpackbundlebox .bundleglassicontitle h3 p { font-size: 19px; margin-bottom: 5px; } .bundleglassicontitle > p { font-size: 12px; line-height: 1.4; } .newdesign_bundle .bundlenewprice { font-size: 16px; } .newdesign_bundle .bundleoldprice { font-size: 13px; } .extra_fee_products { display: flex; flex-wrap: wrap; justify-content: flex-start; width: 100%; } .extra_fee_products .single_fee_product { display: flex; width: 100%; justify-content: flex-start; align-items: center; padding: 10px 0px 0px 35px; margin-bottom: 10px; } .extra_fee_products .single_fee_product:first-child { margin-top: 30px; } .single_fee_product .single_fee_product_img { width: 10%; display: inline-block; } .single_fee_product .single_fee_product_img img { width: 100%; display: block; height: 100%; object-fit: cover; } .single_fee_product .single_fee_product_title { width: 65%; display: inline-block; text-align: left; font-size: 12px; line-height: 1.4; padding: 0px 20px; position: relative; padding-left: 30px; } .extra_fee_products .single_fee_product:first-child .single_fee_product_title:before { content: \"\"; width: 70%; height: 2px; background: #cccccc; position: absolute; display: inline-block; top: -31px; left: 30px; } .single_fee_product .single_fee_product_price { width: 25%; display: flex; font-size: 12px; justify-content: flex-start; } .free_ppt_tag { background: #e5a96b; color: white; font-size: 12px; padding: 1px 7px; margin-right: 5px; } .single_product_price_in { text-decoration: line-through; font-size: 13px; } .gift_totla_price { width: 100%; display: inline-block; text-align: center; font-size: 14px; margin-top: 20px; } .newpackbundlebox_p .newpackbundlebox:last-child { padding-top: 25px; } .newpackbundlebox_p.mixpackbundlevariant .bestsellertag { font-size: 18px; width: 130px; height: 30px; top: -16px; } .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox:last-child { margin-top: 15px; } button#addToCartButton { font-size: 27px; } @media only screen and (max-width:400px){ .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox { padding: 15px 5px; } .newdesign_bundle .bundleglassicon { padding-left: 17px; } .bundleglassicontitle { padding-left: 15px; padding-right: 15px; } .newpackbundlebox .bundleglassicontitle h3 p { font-size: 15px; } .newpackbundlebox_p .newpackbundlebox:before { left: 3px; top: 31px; } .newdesign_bundle .bundlenewprice { font-size: 12px; } .newdesign_bundle .bundleoldprice { font-size: 10px; } .extra_fee_products .single_fee_product { padding: 5px 0px 0px 20px; } .single_fee_product .single_fee_product_title { font-size: 11px; padding: 0px 10px; padding-left: 23px; } .free_ppt_tag { font-size: 10px; padding: 1px 3px; } .single_product_price_in { font-size: 10px; } .gift_totla_price { font-size: 12px; margin-top: 10px; } .extra_fee_products .single_fee_product:first-child .single_fee_product_title:before { top: -19px; left: 27px; } .extra_fee_products .single_fee_product:first-child { margin-top: 20px; } } </style> <style> /* ---- Framework styles reconstructed from Tsuki theme.css ---- */ .choosebundle { text-align: center; margin: 28px 0 4px; font-family: 'Poppins', -apple-system, sans-serif; font-weight: 700; font-size: 18px; color: inherit; letter-spacing: .04em; text-transform: uppercase; } .bundle_bot { text-align: center; font-size: 13px; color: inherit; opacity: .85; margin: 0 0 18px; font-family: 'Poppins', sans-serif; } .bundle_bot strong { color: #c14a3a !important; font-weight: 800 !important; } /* Card container */ .newpackbundlebox_p.mixpackbundlevariant { display: flex; flex-direction: column; } .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox { padding: 15px 15px 15px 38px !important; position: relative; border: 1px solid #e2e2e2; border-radius: 10px; background: #fff; cursor: pointer; box-sizing: border-box; user-select: none; -webkit-user-select: none; -moz-user-select: none; transition: border-color .18s ease, background-color .18s ease, box-shadow .22s ease, transform .22s ease; display: block; } .newpackbundlebox * { user-select: none; -webkit-user-select: none; -moz-user-select: none; caret-color: transparent; } .newpackbundlebox:hover { border-color: #c89868; box-shadow: 0 6px 18px rgba(0,0,0,0.06); transform: translateY(-1px); } /* Active state — pure CSS via native radio + :has() */ .newpackbundlebox:has(input:checked) { border: 1px solid #e2ac78 !important; background: #fdebd5 !important; } .newpackbundlebox:has(input:checked):hover { box-shadow: 0 6px 22px rgba(226,172,120,0.25); } .newpackbundlebox > input { position: absolute; opacity: 0; pointer-events: none; width: 1px; height: 1px; } /* Radio dot — anchored to bundle row (top: 50px from card top) */ .newpackbundlebox_p .newpackbundlebox:before { content: \"\" !important; display: block !important; position: absolute !important; left: 14px !important; top: 50px !important; transform: none !important; width: 14px !important; height: 14px !important; border: 1px solid #999 !important; border-radius: 50% !important; background: #fff !important; box-sizing: border-box !important; } .newpackbundlebox_p .newpackbundlebox:has(input:checked):before { width: 14px !important; height: 14px !important; left: 14px !important; top: 50px !important; outline: 3px solid #fdebd5 !important; border: 1px solid #e2ac78 !important; background: #e2ac78 !important; } /* Override parent overflow so ribbon shows */ .product-block, .product__info-container, .product-info, .product-single, .product-form-container, .grid__item.product-single__sticky { overflow: visible !important; } /* Ribbon centered on card top edge (half above, half below — classic banner look) Override Tsuki literal :last-child margin/padding so all 3 cards have uniform spacing */ .newpackbundlebox_p.mixpackbundlevariant { gap: 28px !important; } .newpackbundlebox_p .newpackbundlebox:last-child, .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox:last-child { margin-top: 0 !important; padding-top: 15px !important; } .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox:has(.bestsellertag:not(:empty)) { padding-top: 15px !important; margin-top: 0 !important; } .bestsellertag:empty { display: none !important; } .newpackbundlebox_p.mixpackbundlevariant .bestsellertag, .bestsellertag { position: absolute !important; left: 50% !important; right: auto !important; bottom: auto !important; transform: translateX(-50%) translateY(-50%) !important; top: 0 !important; background: #6b8d68 !important; color: #fff !important; font-family: Georgia, \"Times New Roman\", serif !important; font-style: italic !important; font-weight: 600 !important; text-align: center !important; line-height: 28px !important; height: 28px !important; width: auto !important; min-width: unset !important; max-width: none !important; padding: 0 26px !important; font-size: 14px !important; letter-spacing: 0.03em !important; white-space: nowrap !important; z-index: 5 !important; text-transform: none !important; box-shadow: 0 3px 8px rgba(0,0,0,0.15) !important; border-radius: 999px !important; clip-path: none !important; } .newpackbundlebox_p.mixpackbundlevariant .bestsellertag.bestvalll, .bestsellertag.bestvalll { background: #6b8d68 !important; } .bestsellertag * { color: #fff !important; font-style: italic !important; text-transform: none !important; } /* Reset Impulse letter-spacing/text-transform across the whole bundle */ .newpackbundlebox_p, .newpackbundlebox_p *, .choosebundle, .choosebundle *, .bundle_bot, .bundle_bot * { letter-spacing: 0 !important; text-transform: none !important; word-spacing: normal !important; } .choosebundle { letter-spacing: 0.04em !important; text-transform: uppercase !important; } /* Title typography */ .bundleglassicon img { width: 100%; height: auto; display: block; } .newpackbundlebox .bundleglassicontitle h3, .newpackbundlebox .bundleglassicontitle h3 *, .newpackbundlebox .bundleglassicontitle p, .newpackbundlebox .bundleglassicontitle p * { text-transform: none !important; letter-spacing: 0 !important; } .bundleglassicontitle h3 p, .newpackbundlebox .bundleglassicontitle h3 p { color: #000 !important; font-weight: 700 !important; line-height: 1.25; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important; } .newpackbundlebox .bundleglassicontitle h3 p strong { font-weight: 800 !important; color: #000 !important; } .newpackbundlebox .bundleglassicontitle h3 p strong:nth-of-type(2) { color: #c14a3a !important; } .bundleglassicontitle > p { color: #555 !important; font-family: 'Poppins', sans-serif !important; } /* Prices */ .newdesign_bundle .newbundleprice { text-align: right; padding-right: 4px; } .newdesign_bundle .bundlenewprice { color: #2a7a3a !important; font-weight: 800 !important; font-size: 18px !important; font-family: 'Poppins', sans-serif !important; line-height: 1.2; } .newdesign_bundle .bundleoldprice { color: #999 !important; text-decoration: line-through; font-family: 'Poppins', sans-serif !important; font-size: 13px !important; } .newdesign_bundle .bundleoldprice:empty { display: none; } /* Gift section amplification */ .extra_fee_products { background: linear-gradient(180deg, transparent 0%, rgba(232,209,176,0.45) 100%); border-radius: 8px; margin-top: 6px !important; padding: 14px 16px 18px !important; } .extra_fee_products .single_fee_product { padding: 10px 0 0 10px !important; } .extra_fee_products .single_fee_product:first-child .single_fee_product_title:before { background: #c14a3a !important; height: 2px; opacity: .35; } .single_fee_product .single_fee_product_title { font-weight: 700 !important; font-size: 14px !important; color: #1a1a1a !important; font-family: 'Poppins', sans-serif !important; } .free_ppt_tag { background: #c14a3a !important; color: #fff !important; font-size: 13px !important; padding: 4px 12px !important; font-weight: 800 !important; letter-spacing: .04em; text-transform: uppercase; box-shadow: 0 2px 6px rgba(193,74,58,0.35); border-radius: 3px; line-height: 1.2; font-family: 'Poppins', sans-serif !important; } .single_product_price_in { text-decoration: line-through; font-size: 13px; color: #999; } .gift_totla_price { font-family: 'Poppins', sans-serif !important; color: inherit !important; font-size: 16px !important; font-weight: 700 !important; text-align: center; } .gift_totla_price strong { color: #c14a3a !important; font-weight: 800 !important; font-size: 17px; } /* Hide the Impulse quantity selector block — bundle UI controls qty (input stays in DOM, form-associated, working) */ .product__quantity, .product-block:has(.product__quantity), .product-block:has(.js-qty__wrapper), .product-block:has(label[for^=\"Quantity-\"]) { display: none !important; } /* Force the bundle block to render on every viewport — defeat Impulse hide-on-small classes if present */ .product-block:has(.newpackbundlebox_p) { display: block !important; visibility: visible !important; } .newpackbundlebox_p, .newpackbundlebox_p.mixpackbundlevariant { display: flex !important; flex-direction: column; visibility: visible !important; } /* Mobile-first responsive sizing — the original Tsuki rules only trigger at <=400px which misses 414/430/480 phones */ @media (max-width: 600px){ .choosebundle { font-size: 16px; margin: 22px 0 4px; } .bundle_bot { font-size: 12px; margin: 0 0 14px; } .newpackbundlebox_p.mixpackbundlevariant { gap: 24px !important; } .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox { padding: 14px 12px 14px 32px !important; border-radius: 8px; } .newpackbundlebox_p .newpackbundlebox:last-child, .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox:last-child { margin-top: 0 !important; padding-top: 14px !important; } .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox:has(.bestsellertag:not(:empty)) { padding-top: 32px !important; } .newpackbundlebox_p .newpackbundlebox:before { left: 10px !important; top: 50% !important; transform: translateY(-50%) !important; width: 12px !important; height: 12px !important; } .newpackbundlebox_p .newpackbundlebox:has(input:checked):before { left: 10px !important; top: 50% !important; transform: translateY(-50%) !important; width: 12px !important; height: 12px !important; } .newdesign_bundle { flex-wrap: nowrap; align-items: center; } .newdesign_bundle .bundleglassicon { width: 56px !important; min-width: 56px !important; padding-left: 0 !important; flex-shrink: 0; } .bundleglassicontitle { width: auto !important; flex: 1 1 auto !important; padding-left: 12px !important; padding-right: 8px !important; min-width: 0; } .newpackbundlebox .bundleglassicontitle h3 p { font-size: 15px !important; line-height: 1.2; } .bundleglassicontitle > p { font-size: 11px !important; } .newdesign_bundle .newbundleprice { width: auto !important; min-width: 72px !important; flex-shrink: 0; padding-right: 0 !important; } .newdesign_bundle .bundlenewprice { font-size: 15px !important; } .newdesign_bundle .bundleoldprice { font-size: 11px !important; } .newpackbundlebox_p.mixpackbundlevariant .bestsellertag, .bestsellertag { font-size: 13px !important; line-height: 26px !important; height: 26px !important; padding: 0 22px !important; top: 0 !important; } .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox:has(.bestsellertag:not(:empty)) { padding-top: 14px !important; } .extra_fee_products { padding: 12px 12px 14px !important; margin-top: 8px !important; } .extra_fee_products .single_fee_product { padding: 8px 0 0 4px !important; } .single_fee_product .single_fee_product_img { width: 44px !important; flex-shrink: 0; } .single_fee_product .single_fee_product_title { font-size: 12px !important; padding: 0 8px !important; } .free_ppt_tag { font-size: 11px !important; padding: 3px 8px !important; } .single_product_price_in { font-size: 11px !important; } .gift_totla_price { font-size: 14px !important; margin-top: 10px !important; } .gift_totla_price strong { font-size: 14px !important; } } @media (max-width: 380px){ .newpackbundlebox_p.mixpackbundlevariant .newpackbundlebox { padding: 12px 10px 12px 28px !important; } .newpackbundlebox_p .newpackbundlebox:before { left: 8px !important; } .newdesign_bundle .bundleglassicon { width: 48px !important; min-width: 48px !important; } .bundleglassicontitle { padding-left: 10px !important; padding-right: 4px !important; } .newpackbundlebox .bundleglassicontitle h3 p { font-size: 14px !important; } .newdesign_bundle .newbundleprice { min-width: 64px !important; } .newdesign_bundle .bundlenewprice { font-size: 14px !important; } } </style> <script> (function(){ function getQty(){var c=document.querySelector('input[name=\"om-bundle\"]:checked');return c?parseInt(c.value,10):1;} if(!window.__omBundleFetchPatched){ window.__omBundleFetchPatched=true; var origFetch=window.fetch.bind(window); window.fetch=function(input,opts){ try{ var url=typeof input==='string'?input:(input&&input.url)||''; if(url.indexOf('/cart/add')>-1 && opts && opts.body){ var qty=getQty(); var body=opts.body; if(typeof body==='string'){ if(/(^|&)quantity=/.test(body)) body=body.replace(/(^|&)quantity=[^&]*/g,'$1quantity='+qty); else body+='&quantity='+qty; opts.body=body; console.log('[bundle] patched fetch body qty='+qty); } else if(typeof FormData!=='undefined' && body instanceof FormData){ body.set('quantity',String(qty)); console.log('[bundle] patched FormData qty='+qty); } } }catch(e){console.error('[bundle] fetch patch error',e);} return origFetch(input,opts); }; } if(!window.__omBundleXHRPatched){ window.__omBundleXHRPatched=true; var origSend=XMLHttpRequest.prototype.send; var origOpen=XMLHttpRequest.prototype.open; XMLHttpRequest.prototype.open=function(method,url){this._omUrl=url;return origOpen.apply(this,arguments);}; XMLHttpRequest.prototype.send=function(body){ try{ if(this._omUrl && this._omUrl.indexOf('/cart/add')>-1 && body){ var qty=getQty(); if(typeof body==='string'){ if(/(^|&)quantity=/.test(body)) body=body.replace(/(^|&)quantity=[^&]*/g,'$1quantity='+qty); else body+='&quantity='+qty; arguments[0]=body; console.log('[bundle] patched XHR body qty='+qty); } else if(typeof FormData!=='undefined' && body instanceof FormData){ body.set('quantity',String(qty)); } } }catch(e){} return origSend.apply(this,arguments); }; } function setActiveByRadio(r){ document.querySelectorAll('.newpackbundlebox').forEach(function(b){b.classList.remove('active');}); var box=r&&r.closest?r.closest('.newpackbundlebox'):null; if(box)box.classList.add('active'); } function syncQty(){ var qty=getQty(); var qStr=String(qty); document.querySelectorAll('input[name=\"quantity\"], .js-qty__input, [data-quantity-input], .product-quantity input').forEach(function(i){ if(!i)return; i.value=qStr; i.setAttribute('value',qStr); try{i.dispatchEvent(new Event('change',{bubbles:true}));i.dispatchEvent(new Event('input',{bubbles:true}));}catch(e){} }); document.querySelectorAll('form[action*=\"/cart/add\"]').forEach(function(f){ var any=f.querySelector('input[name=\"quantity\"]'); if(!any){ var h=document.createElement('input'); h.type='hidden'; h.name='quantity'; h.value=qStr; h.setAttribute('value',qStr); h.setAttribute('data-om-bundle-qty','1'); f.appendChild(h); } }); } function init(){ syncQty(); document.addEventListener('change',function(e){ if(!e.target.matches||!e.target.matches('input[name=\"om-bundle\"]'))return; setActiveByRadio(e.target); syncQty(); }); window.addEventListener('click',function(e){ var btn=e.target.closest&&e.target.closest('button[name=\"add\"], button[type=\"submit\"], [data-add-to-cart]'); if(!btn)return; if(!btn.closest('form[action*=\"/cart/add\"]'))return; syncQty(); },true); window.addEventListener('submit',function(e){ var f=e.target; if(!f.matches||!f.matches('form[action*=\"/cart/add\"]'))return; syncQty(); },true); var c=document.querySelector('input[name=\"om-bundle\"]:checked'); if(c)setActiveByRadio(c); } if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init(); })(); </script>"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true
           }
         },
         "custom_stock_scarcity": {
@@ -32,53 +65,17 @@
             "code": "<div class=\"stock-scarcity-container\"> <span class=\"stock-dot\"></span> <span class=\"text-green\">Listo</span> <span class=\"text-bold\">para envío | Stock:</span> <div class=\"meter-bar\"> <span class=\"meter-box active\"></span> <span class=\"meter-box\"></span> <span class=\"meter-box\"></span> <span class=\"meter-box\"></span> </div> <span class=\"text-red\">Bajo</span> </div> <style> .stock-scarcity-container { display: flex; justify-content: center; flex-wrap: nowrap; align-items: center; width: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 13px; letter-spacing: -0.3px; line-height: 1.5; color: inherit; gap: 5px; margin: 10px 0 14px; } .stock-dot { height: 8px; width: 8px; background-color: #28a745; border-radius: 50%; display: inline-block; flex-shrink: 0; box-shadow: 0 0 0 0 rgba(40,167,69,0.6); animation: omStockPulse 2s ease-out infinite; } @keyframes omStockPulse { to { box-shadow: 0 0 0 8px rgba(40,167,69,0); } } .text-green { color: #28a745 !important; font-weight: 700 !important; white-space: nowrap; letter-spacing: 0 !important; text-transform: none !important; } .text-bold { font-weight: 700 !important; color: inherit; white-space: nowrap; letter-spacing: 0 !important; text-transform: none !important; } .meter-bar { display: flex; gap: 2px; align-items: center; margin: 0 4px; } .meter-box { width: 10px; height: 10px; background-color: #d6d3cd; border-radius: 1px; } .meter-box.active { background-color: #d32f2f; } .text-red { color: #d32f2f !important; font-weight: 800 !important; text-transform: uppercase !important; font-size: 11px !important; letter-spacing: 0.04em !important; } @media (max-width: 480px){ .stock-scarcity-container { font-size: 12px; gap: 4px; } .meter-box { width: 9px; height: 9px; } .text-red { font-size: 10px !important; } } </style>"
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
         "custom_accordions": {
           "type": "custom",
           "settings": {
             "code": "<div class=\"om-accordions\"> <details class=\"om-acc\"> <summary> <span class=\"om-acc__title\"> <svg class=\"om-acc__icon\" aria-hidden=\"true\" viewBox=\"0 0 20 20\" width=\"20\" height=\"20\"><path fill-rule=\"evenodd\" d=\"M9.69502 0.6786C9.91338 0.601796 10.1516 0.603123 10.3691 0.682353L18.2151 3.54058C18.61 3.68445 18.8728 4.05988 18.8728 4.48018V14.4287C18.8728 14.8074 18.6588 15.1537 18.32 15.3231L10.4731 19.2465C10.196 19.385 9.87022 19.3873 9.59117 19.2526L1.45405 15.3244C1.10843 15.1576 0.888794 14.8076 0.888794 14.4239V4.48434C0.888794 4.05997 1.15665 3.68181 1.55699 3.541L9.69502 0.6786ZM6.07999 3.01017L2.5346 4.25719L10.149 7.63545L13.5692 6.118L6.07999 3.01017ZM6.78606 2.76183L14.1997 5.83828L17.5367 4.35774L10.0268 1.62195L6.78606 2.76183ZM1.88879 14.4239L1.88879 5.06467L9.64898 8.50762V18.1701L1.88879 14.4239ZM17.8728 14.4287L10.649 18.0405V8.50762L17.8728 5.30263V14.4287Z\"/></svg> Empaque listo para regalar </span> <svg class=\"om-acc__caret\" aria-hidden=\"true\" viewBox=\"0 0 10 6\"><path d=\"M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z\" fill=\"currentColor\"/></svg> </summary> <div class=\"om-acc__body\"> <p>Cada set viene presentado en una <strong>caja de madera con cierre magnético</strong>, lista para regalar sin envoltorio adicional. Interior acolchado que protege cristal y piedras durante el transporte.</p> <p>Si pedís más de un set, cada uno llega en su propia caja independiente.</p> </div> </details> <details class=\"om-acc\"> <summary> <span class=\"om-acc__title\"> <svg class=\"om-acc__icon\" aria-hidden=\"true\" viewBox=\"0 0 20 20\" width=\"20\" height=\"20\"><path d=\"M11.571 1.05882C11.571 0.750194 11.8198 0.5 12.1266 0.5H13.4572C17.0692 0.5 20 3.45304 20 7.08924C20 10.7255 17.0692 13.6785 13.4572 13.6785L1.89992 13.7105L1.30855 13.1197L1.89992 12.5484L13.4572 12.5608C16.4541 12.5608 18.8889 10.1096 18.8889 7.08924C18.8889 4.06891 16.4541 1.61765 13.4572 1.61765H12.1266C11.8198 1.61765 11.571 1.36745 11.571 1.05882Z\"/><path d=\"M6.00311 7.00677C6.22317 6.7917 6.57489 6.79679 6.78871 7.01815C7.00252 7.2395 6.99746 7.59329 6.7774 7.80836L6.00311 7.00677ZM1.30855 13.1197L6.73968 18.5463C6.9565 18.7647 6.95627 19.1185 6.73917 19.3366C6.52207 19.5547 6.17031 19.5544 5.9535 19.3361L0.162462 13.5034C0.0572388 13.3974 -0.00128425 13.2533 2.13868e-05 13.1036C0.00132703 12.9538 0.0623521 12.8108 0.169407 12.7067C0.3269 12.5535 1.78474 11.1291 3.20439 9.74186L6.00311 7.00677L6.7774 7.80836L3.97862 10.5435C2.95441 11.5444 1.8705 12.5709 1.30855 13.1197Z\"/></svg> Envíos y entrega </span> <svg class=\"om-acc__caret\" aria-hidden=\"true\" viewBox=\"0 0 10 6\"><path d=\"M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z\" fill=\"currentColor\"/></svg> </summary> <div class=\"om-acc__body\"> <p><strong>Uruguay:</strong> 1 a 3 días hábiles. Envío gratis en compras superiores a $1.000 UYU.</p> <p><strong>Internacional:</strong> 5 a 10 días hábiles vía DHL/FedEx con tracking. Envío gratuito a todo el mundo.</p> <p>Despachamos en 24–48 horas desde Montevideo. Cualquier consulta de seguimiento, escribinos.</p> </div> </details> <details class=\"om-acc\"> <summary> <span class=\"om-acc__title\"> <svg class=\"om-acc__icon\" aria-hidden=\"true\" viewBox=\"0 0 20 20\" width=\"20\" height=\"20\"><path d=\"M11.571 1.05882C11.571 0.750194 11.8198 0.5 12.1266 0.5H13.4572C17.0692 0.5 20 3.45304 20 7.08924C20 10.7255 17.0692 13.6785 13.4572 13.6785L1.89992 13.7105L1.30855 13.1197L1.89992 12.5484L13.4572 12.5608C16.4541 12.5608 18.8889 10.1096 18.8889 7.08924C18.8889 4.06891 16.4541 1.61765 13.4572 1.61765H12.1266C11.8198 1.61765 11.571 1.36745 11.571 1.05882Z\"/><path d=\"M6.00311 7.00677C6.22317 6.7917 6.57489 6.79679 6.78871 7.01815C7.00252 7.2395 6.99746 7.59329 6.7774 7.80836L6.00311 7.00677ZM1.30855 13.1197L6.73968 18.5463C6.9565 18.7647 6.95627 19.1185 6.73917 19.3366C6.52207 19.5547 6.17031 19.5544 5.9535 19.3361L0.162462 13.5034C0.0572388 13.3974 -0.00128425 13.2533 2.13868e-05 13.1036C0.00132703 12.9538 0.0623521 12.8108 0.169407 12.7067C0.3269 12.5535 1.78474 11.1291 3.20439 9.74186L6.00311 7.00677L6.7774 7.80836L3.97862 10.5435C2.95441 11.5444 1.8705 12.5709 1.30855 13.1197Z\"/></svg> 90 días de garantía y devoluciones </span> <svg class=\"om-acc__caret\" aria-hidden=\"true\" viewBox=\"0 0 10 6\"><path d=\"M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z\" fill=\"currentColor\"/></svg> </summary> <div class=\"om-acc__body\"> <p>Tenés <strong>90 días desde la entrega</strong> para pedir reemplazo o devolución sin preguntas. Si algo no te convence, escribinos a soporte@omalley.uy y resolvemos.</p> <p>Si llega con cualquier rotura, te enviamos un reemplazo sin costo dentro de las 48 horas.</p> </div> </details> <details class=\"om-acc\"> <summary> <span class=\"om-acc__title\"> <svg class=\"om-acc__icon\" aria-hidden=\"true\" viewBox=\"0 0 20 20\" width=\"20\" height=\"20\"><path d=\"M6.31104 9.13574C6.31104 8.99767 6.42296 8.88574 6.56104 8.88574H13.7464C13.8844 8.88574 13.9964 8.99767 13.9964 9.13574C13.9964 9.27381 13.8844 9.38574 13.7464 9.38574H6.56104C6.42296 9.38574 6.31104 9.27381 6.31104 9.13574Z\"/><path d=\"M6.31104 14.0544C6.31104 13.9164 6.42296 13.8044 6.56104 13.8044H13.439C13.577 13.8044 13.689 13.9164 13.689 14.0544C13.689 14.1925 13.577 14.3044 13.439 14.3044H6.56104C6.42296 14.3044 6.31104 14.1925 6.31104 14.0544Z\"/><path d=\"M6.92587 11.5952C6.92587 11.4571 7.0378 11.3452 7.17587 11.3452H12.8241C12.9622 11.3452 13.0741 11.4571 13.0741 11.5952C13.0741 11.7333 12.9622 11.8452 12.8241 11.8452H7.17587C7.0378 11.8452 6.92587 11.7333 6.92587 11.5952Z\"/><path d=\"M5.19623 1.77832C5.19623 0.949892 5.8678 0.27832 6.69623 0.27832H13.3038C14.1322 0.27832 14.8038 0.949893 14.8038 1.77832V3.46728C14.8038 4.29571 14.1322 4.96728 13.3038 4.96728H6.69623C5.8678 4.96728 5.19623 4.29571 5.19623 3.46728V1.77832ZM6.69623 1.27832C6.42009 1.27832 6.19623 1.50218 6.19623 1.77832V3.46728C6.19623 3.74342 6.42009 3.96728 6.69623 3.96728H13.3038C13.5799 3.96728 13.8038 3.74342 13.8038 3.46728V1.77832C13.8038 1.50218 13.5799 1.27832 13.3038 1.27832H6.69623Z\"/><path d=\"M3.73691 2.50806V18.7232H16.2631V2.50806H14.4981V1.50806H16.2631C16.8154 1.50806 17.2631 1.95577 17.2631 2.50806V18.7232C17.2631 19.2755 16.8154 19.7232 16.2631 19.7232H3.73691C3.18462 19.7232 2.73691 19.2755 2.73691 18.7232V2.50806C2.73691 1.95577 3.18462 1.50806 3.73691 1.50806H5.75974V2.50806L3.73691 2.50806Z\"/></svg> Materiales y especificaciones </span> <svg class=\"om-acc__caret\" aria-hidden=\"true\" viewBox=\"0 0 10 6\"><path d=\"M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z\" fill=\"currentColor\"/></svg> </summary> <div class=\"om-acc__body\"> <p><strong>Vasos:</strong> cristal sin plomo. Capacidad 300 ml. Altura 9 cm · diámetro 8 cm. Peso por vaso 280 g.</p> <p><strong>Piedras:</strong> granito natural pulido. 8 unidades de 20×20×20 mm. Reutilizables, no requieren detergentes.</p> <p><strong>Estuche:</strong> madera maciza con interior acolchado. Dimensiones 28×24×9 cm.</p> </div> </details> </div> <style> .om-accordions { display: block; margin: 18px 0 0; font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; } .om-acc { border-top: 1px solid #e5e0d6; padding: 0; margin: 0; } .om-acc:last-child { border-bottom: 1px solid #e5e0d6; } .om-acc > summary { list-style: none; cursor: pointer; padding: 16px 4px; display: flex; align-items: center; justify-content: space-between; gap: 12px; } .om-acc > summary::-webkit-details-marker { display: none; } .om-acc__title { display: flex; align-items: center; gap: 12px; font-weight: 600 !important; font-size: 15px !important; color: inherit; letter-spacing: 0 !important; text-transform: none !important; } .om-acc__icon { flex-shrink: 0; color: inherit; opacity: .85; } .om-acc__caret { width: 11px; height: 7px; color: inherit; opacity: .7; transition: transform .25s ease; flex-shrink: 0; } .om-acc[open] > summary .om-acc__caret { transform: rotate(180deg); } .om-acc__body { padding: 0 4px 18px 36px; font-size: 14px; line-height: 1.55; color: inherit; opacity: .92; } .om-acc__body p { margin: 0 0 10px; } .om-acc__body p:last-child { margin-bottom: 0; } .om-acc__body strong { font-weight: 700; } @media (max-width: 480px){ .om-acc > summary { padding: 14px 2px; gap: 8px; } .om-acc__title { font-size: 14px !important; gap: 10px; } .om-acc__body { padding: 0 2px 14px 30px; font-size: 13px; } } </style>"
           }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": false
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {}
-        },
-        "inventory_status": {
-          "type": "inventory_status",
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {}
-        },
-        "sales_point": {
-          "type": "sales_point",
-          "settings": {}
-        },
-        "tab": {
-          "type": "tab",
-          "settings": {}
-        },
-        "text": {
-          "type": "text",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
-          "settings": {}
-        },
-        "contact": {
-          "type": "contact",
-          "settings": {}
         }
       },
       "block_order": [
@@ -94,45 +91,71 @@
         "description",
         "custom_accordions"
       ],
-      "settings": {}
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
     },
     "sub": {
       "type": "product-full-width",
       "disabled": true,
-      "settings": {}
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "disabled": true,
-      "settings": {}
-    },
-    "recently-viewed": {
-      "type": "recently-viewed",
-      "disabled": true,
-      "settings": {}
-    },
-    "collection-return": {
-      "type": "collection-return",
-      "settings": {}
-    },
-    "background-image-text": {
-      "type": "background-image-text",
       "settings": {
-        "title": "Sobre tu marca",
-        "parallax": false
+        "max_width": true
       }
+    },
+    "1778097604a19c3c86": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_402ba5e_JXbg6m": {
+          "type": "ai_gen_block_402ba5e",
+          "settings": {
+            "image": "shopify://shop_images/image-forge-output_2.png",
+            "desktop_width_percent": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_402ba5e_JXbg6m"
+      ],
+      "settings": {}
     },
     "text-and-image": {
       "type": "text-and-image",
       "settings": {
-        "title": "Sobre tu marca"
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Sobre tu marca",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
       }
     },
     "text-and-image2": {
       "type": "text-and-image",
       "settings": {
+        "image_width": 700,
+        "subtitle": "",
         "title": "Sobre tu marca",
-        "layout": "left"
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
       }
     },
     "testimonials": {
@@ -140,15 +163,30 @@
       "blocks": {
         "testimonials-0": {
           "type": "testimonial",
-          "settings": {}
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
         },
         "testimonials-1": {
           "type": "testimonial",
-          "settings": {}
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
         },
         "testimonials-2": {
           "type": "testimonial",
-          "settings": {}
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
         }
       },
       "block_order": [
@@ -156,17 +194,46 @@
         "testimonials-1",
         "testimonials-2"
       ],
+      "settings": {
+        "title": "Testimonials",
+        "align_text": "center",
+        "round_images": true,
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
       "settings": {}
     },
     "loox-product-reviews-app-section": {
       "type": "apps",
-      "settings": {}
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
     "main",
     "sub",
-    "background-image-text",
+    "1778097604a19c3c86",
     "text-and-image",
     "text-and-image2",
     "testimonials",
