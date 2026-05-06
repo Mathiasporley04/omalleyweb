@@ -121,10 +121,20 @@
             "border_radius": 0
           },
           "blocks": {}
+        },
+        "ai_gen_block_402ba5e_KCwNBC": {
+          "type": "ai_gen_block_402ba5e",
+          "settings": {
+            "image": "shopify://shop_images/image-forge-output_6.png",
+            "desktop_width_percent": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_402ba5e_JXbg6m"
+        "ai_gen_block_402ba5e_JXbg6m",
+        "ai_gen_block_402ba5e_KCwNBC"
       ],
       "settings": {}
     },
