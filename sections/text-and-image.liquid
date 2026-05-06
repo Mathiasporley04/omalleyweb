@@ -9,18 +9,60 @@
   if section.settings.theme == 'dark'
     assign dark_theme = true
   endif
+  assign bleed = false
+  if section.settings.bleed
+    assign bleed = true
+  endif
 -%}
 
-{%- if dark_theme -%}
+{%- if dark_theme or bleed -%}
   {%- style -%}
-    #shopify-section-{{ section.id }}.shopify-section { background: #000; }
-    #shopify-section-{{ section.id }} .index-section { padding-top: 50px; padding-bottom: 50px; }
-    #shopify-section-{{ section.id }},
-    #shopify-section-{{ section.id }} .feature-row__text,
-    #shopify-section-{{ section.id }} .subheading,
-    #shopify-section-{{ section.id }} .h1,
-    #shopify-section-{{ section.id }} .rte,
-    #shopify-section-{{ section.id }} .rte * { color: #fff !important; }
+    {%- if bleed -%}
+      #shopify-section-{{ section.id }}.shopify-section {
+        width: 100vw; position: relative;
+        left: 50%; right: 50%;
+        margin-left: -50vw; margin-right: -50vw;
+        overflow: hidden;
+      }
+      #shopify-section-{{ section.id }} .page-width,
+      #shopify-section-{{ section.id }} .index-section,
+      #shopify-section-{{ section.id }} .feature-row,
+      #shopify-section-{{ section.id }} .feature-row-wrapper {
+        max-width: 100% !important; margin: 0 !important; padding: 0 !important;
+      }
+      #shopify-section-{{ section.id }} .image-wrap { margin: 0 !important; }
+      #shopify-section-{{ section.id }} .feature-row__image {
+        display: block !important; vertical-align: bottom !important;
+      }
+      @media (min-width: 769px) {
+        #shopify-section-{{ section.id }} .feature-row__item {
+          flex: 1 1 50% !important; max-width: 50% !important; padding: 0 !important;
+        }
+        #shopify-section-{{ section.id }} .feature-row__text { padding: 40px 50px !important; }
+      }
+      @media (max-width: 768px) {
+        #shopify-section-{{ section.id }} .feature-row {
+          flex-direction: column !important; display: flex !important;
+        }
+        #shopify-section-{{ section.id }} .feature-row__item {
+          flex: 1 1 100% !important; max-width: 100% !important; width: 100% !important; padding: 0 !important;
+        }
+        #shopify-section-{{ section.id }} .feature-row__text { padding: 36px 28px !important; }
+        #shopify-section-{{ section.id }} .h1 { font-size: 24px !important; line-height: 1.2 !important; margin-bottom: 14px !important; }
+        #shopify-section-{{ section.id }} .subheading { font-size: 11px !important; letter-spacing: 0.12em !important; margin-bottom: 8px !important; }
+        #shopify-section-{{ section.id }} .rte,
+        #shopify-section-{{ section.id }} .rte p { font-size: 14px !important; line-height: 1.55 !important; }
+      }
+    {%- endif -%}
+    {%- if dark_theme -%}
+      #shopify-section-{{ section.id }}.shopify-section { background: #000; }
+      #shopify-section-{{ section.id }},
+      #shopify-section-{{ section.id }} .feature-row__text,
+      #shopify-section-{{ section.id }} .subheading,
+      #shopify-section-{{ section.id }} .h1,
+      #shopify-section-{{ section.id }} .rte,
+      #shopify-section-{{ section.id }} .rte * { color: #fff !important; }
+    {%- endif -%}
   {%- endstyle -%}
 {%- endif -%}
 
@@ -226,6 +268,12 @@
         { "value": "light", "label": "Claro (fondo blanco)" },
         { "value": "dark",  "label": "Oscuro (fondo negro, letras blancas)" }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "bleed",
+      "label": "Full-bleed (foto y texto a 50/50, ancho completo)",
+      "default": false
     }
   ],
   "presets": [

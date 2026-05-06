@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* cache-bust 2026-05-06 20:30 footer copyright align v2 */
+/* cache-bust 2026-05-06 20:45 perf: removed 77 :has() in favor of section-injected styles */
 /*!
   Impulse, by Archetype Themes
   http://archetypethemes.co
@@ -9392,110 +9392,6 @@ html[dir=rtl] .background-media-text__text{
   }
 }
 
-/* Sección "El vaso que se siente antes de tomar" — full-bleed, fondo negro, letras blancas */
-/* Layout (full-bleed) — aplica a ambas secciones (descarga_1 y descarga_2) */
-.shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])),
-.shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) {
-  width: 100vw !important;
-  position: relative !important;
-  left: 50% !important;
-  right: 50% !important;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
-  overflow: hidden;
-}
-/* Color (fondo negro + letras blancas) — solo descarga_2 */
-.shopify-section:has(img[data-srcset*="descarga_2"]),
-.shopify-section:has(img[srcset*="descarga_2"]) {
-  background: #000 !important;
-}
-.shopify-section:has(img[data-srcset*="descarga_2"]) .subheading,
-.shopify-section:has(img[data-srcset*="descarga_2"]) .h1,
-.shopify-section:has(img[data-srcset*="descarga_2"]) .rte,
-.shopify-section:has(img[data-srcset*="descarga_2"]) .rte *,
-.shopify-section:has(img[data-srcset*="descarga_2"]) p,
-.shopify-section:has(img[srcset*="descarga_2"]) .subheading,
-.shopify-section:has(img[srcset*="descarga_2"]) .h1,
-.shopify-section:has(img[srcset*="descarga_2"]) .rte,
-.shopify-section:has(img[srcset*="descarga_2"]) .rte *,
-.shopify-section:has(img[srcset*="descarga_2"]) p {
-  color: #fff !important;
-}
-.shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .page-width,
-.shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .page-width,
-.shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .index-section,
-.shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .index-section,
-.shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .feature-row,
-.shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .feature-row,
-.shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .feature-row-wrapper,
-.shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .feature-row-wrapper {
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-.shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .image-wrap,
-.shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .image-wrap {
-  margin: 0 !important;
-  /* keep padding-bottom (aspect-ratio trick) */
-}
-.shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .feature-row__image,
-.shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .feature-row__image {
-  display: block !important;
-  vertical-align: bottom !important;
-}
-
-/* Desktop: 50/50 split, image left, text right with breathing room */
-@media (min-width: 769px) {
-  .shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .feature-row__item,
-  .shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .feature-row__item {
-    flex: 1 1 50% !important;
-    max-width: 50% !important;
-    padding: 0 !important;
-  }
-  .shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .feature-row__text,
-  .shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .feature-row__text {
-    padding: 40px 50px !important;
-  }
-}
-
-/* Mobile: stack vertically, image full width on top, text full width below */
-@media (max-width: 768px) {
-  .shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .feature-row,
-  .shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .feature-row {
-    flex-direction: column !important;
-    display: flex !important;
-  }
-  .shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .feature-row__item,
-  .shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .feature-row__item {
-    flex: 1 1 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 0 !important;
-  }
-  .shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .feature-row__text,
-  .shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .feature-row__text {
-    padding: 36px 28px !important;
-  }
-  .shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .h1,
-  .shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .h1 {
-    font-size: 24px !important;
-    line-height: 1.2 !important;
-    margin-bottom: 14px !important;
-  }
-  .shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .subheading,
-  .shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .subheading {
-    font-size: 11px !important;
-    letter-spacing: 0.12em !important;
-    margin-bottom: 8px !important;
-  }
-  .shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .rte,
-  .shopify-section:is(:has(img[data-srcset*="descarga_1"]),:has(img[data-srcset*="descarga_2"])) .rte p,
-  .shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .rte,
-  .shopify-section:is(:has(img[srcset*="descarga_1"]),:has(img[srcset*="descarga_2"])) .rte p {
-    font-size: 14px !important;
-    line-height: 1.55 !important;
-  }
-}
 
 .shopify-challenge__container{
   padding:30px 22px
