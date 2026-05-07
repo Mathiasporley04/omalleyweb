@@ -182,7 +182,7 @@
           "type": "ai_gen_block_abd0d1f",
           "settings": {
             "image": "shopify://shop_images/image-forge-output_10.png",
-            "desktop_width_percent": 100,
+            "desktop_width_percent": 110,
             "border_radius": 0
           },
           "blocks": {}
