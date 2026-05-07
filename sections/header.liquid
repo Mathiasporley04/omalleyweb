@@ -1,3 +1,8 @@
+{% style %}
+  .js-search-header,
+  .site-header__search-container { display: none !important; }
+{% endstyle %}
+
 {%- liquid
   assign main_menu = linklists[section.settings.main_menu_link_list]
   assign toolbar_menu = linklists[section.settings.toolbar_menu]
@@ -412,13 +417,13 @@
           "type": "text",
           "id": "text",
           "label": "t:sections.header.blocks.announcement.settings.text.label",
-          "default": "Hassle-free returns"
+          "default": "Devoluciones sin complicaciones"
         },
         {
           "type": "text",
           "id": "link_text",
           "label": "t:sections.header.blocks.announcement.settings.link_text.label",
-          "default": "30-day postage paid returns"
+          "default": "Devoluciones gratuitas durante 30 días"
         },
         {
           "type": "url",
