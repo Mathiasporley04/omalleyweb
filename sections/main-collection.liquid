@@ -6,6 +6,11 @@
   endfor
 -%}
 
+{% style %}
+  .collection-filter__item--drawer,
+  .collection-filter__item--sort { display: none !important; }
+{% endstyle %}
+
 <div
   class="collection-content"
   data-section-id="{{ section.id }}"
