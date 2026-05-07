@@ -7,8 +7,20 @@
 {% style %}
   .ai-simple-image-{{ ai_gen_id }} {
     display: block;
-    width: {{ block.settings.desktop_width_percent }}%;
+    width: 100%;
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 769px) {
+    .ai-simple-image-{{ ai_gen_id }} {
+      width: {{ block.settings.desktop_width_percent }}%;
+      max-width: none;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   .ai-simple-image__wrapper-{{ ai_gen_id }} {
@@ -91,7 +103,7 @@
       "id": "desktop_width_percent",
       "label": "Ancho en escritorio",
       "min": 50,
-      "max": 100,
+      "max": 130,
       "step": 5,
       "unit": "%",
       "default": 100
