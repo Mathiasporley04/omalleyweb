@@ -66,6 +66,7 @@
     "cart_type": "drawer",
     "cart_notes_enable": false,
     "cart_terms_conditions_enable": false,
+    "social_snapchat_link": "",
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
     "checkout_body_background_color": "#ffffff",
@@ -140,7 +141,7 @@
             "type": "menu",
             "settings": {
               "show_footer_title": true,
-              "menu": "main-menu",
+              "menu": "footer",
               "container_width": 33
             }
           },
@@ -148,8 +149,8 @@
             "type": "newsletter",
             "settings": {
               "show_footer_title": true,
-              "title": "Newsletter",
-              "text": "<p>Suscribite para obtener las mejores ofertas y noticias primero que nadie.</p>",
+              "title": "📬 Newsletter",
+              "text": "<p>Recibí ofertas, lanzamientos y novedades</p>",
               "container_width": 33
             }
           }
