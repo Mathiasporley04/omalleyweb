@@ -11808,3 +11808,11 @@ html[dir=rtl] .product-single__meta .rte{
 
 /* Ocultar el badge "Verificado" del Judge.me Cards Carousel */
 .jdgm-verified-badge-header { display: none !important; }
+
+/* Agrandar imagen "CONFIANZA EN CADA ENVÍO" 5% solo en mobile */
+@media (max-width: 768px) {
+  [id$="__1778107452eb4d1233"] > div {
+    transform: scale(1.05);
+    transform-origin: center center;
+  }
+}
