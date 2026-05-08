@@ -41,18 +41,28 @@
 
   /* Desktop: centrar el producto + título en 2 líneas */
   @media (min-width: 769px) {
-    /* Esconder la columna derecha (queda vacía con el precio oculto) y centrar la izquierda */
+    /* Esconder la columna derecha (queda vacía con el precio oculto) */
     #shopify-section-{{ section.id }} .page-content .grid > .grid__item:not(.product-single__sticky) {
       display: none !important;
+      width: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
     }
+    /* Centrar la columna izquierda; override de medium-up--two-fifths (40%) */
     #shopify-section-{{ section.id }} .page-content .grid {
-      justify-content: center !important;
       display: flex !important;
+      justify-content: center !important;
+      flex-wrap: wrap;
     }
     #shopify-section-{{ section.id }} .page-content .grid > .grid__item.product-single__sticky {
       flex: 0 0 auto !important;
-      max-width: 720px !important;
-      width: 100% !important;
+      max-width: 820px !important;
+      width: 820px !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin: 0 auto !important;
+      border: 0 !important;
+      box-shadow: none !important;
     }
 
     /* Título limitado en ancho para que rompa en 2 líneas */
