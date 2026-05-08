@@ -257,7 +257,7 @@
             "stars_color": "#000000",
             "arrows_color": "#000000",
             "transition_speed": 2,
-            "header_text": "Lo que dicen nuestros clientes",
+            "header_text": "sus reseñas",
             "show_average_rating": true
           }
         }
