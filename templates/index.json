@@ -74,8 +74,8 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.featured_collection.name",
       "settings": {
-        "title": "Featured collection",
-        "home_featured_products": "",
+        "title": "Nuestros vasos giratorios",
+        "home_featured_products": "vasos-giratorios",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": true,
