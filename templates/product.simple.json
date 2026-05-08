@@ -91,7 +91,11 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
-      "settings": {}
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "También te puede gustar",
+        "related_count": 4
+      }
     }
   },
   "order": [
