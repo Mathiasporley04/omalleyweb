@@ -13,14 +13,6 @@
     #shopify-section-{{ section.id }} .product__price { font-size: 32px !important; }
   }
 
-  /* Price encima del título via flex order en el meta wrapper */
-  #shopify-section-{{ section.id }} .product-single__meta {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  #shopify-section-{{ section.id }} .product-single__meta [data-product-blocks] { order: 1 !important; }
-  #shopify-section-{{ section.id }} .product-single__meta .product-block--header { order: 2 !important; }
-
   /* Título clickeable, sin underline ni cambio de color */
   #shopify-section-{{ section.id }} .product-single__title a,
   #shopify-section-{{ section.id }} .product-single__title a:hover,
