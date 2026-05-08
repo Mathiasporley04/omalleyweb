@@ -38,6 +38,30 @@
 
   /* Ocultar precio en el featured-product */
   #shopify-section-{{ section.id }} .product-block--price { display: none !important; }
+
+  /* Desktop: centrar el producto + título en 2 líneas */
+  @media (min-width: 769px) {
+    /* Esconder la columna derecha (queda vacía con el precio oculto) y centrar la izquierda */
+    #shopify-section-{{ section.id }} .page-content .grid > .grid__item:not(.product-single__sticky) {
+      display: none !important;
+    }
+    #shopify-section-{{ section.id }} .page-content .grid {
+      justify-content: center !important;
+      display: flex !important;
+    }
+    #shopify-section-{{ section.id }} .page-content .grid > .grid__item.product-single__sticky {
+      flex: 0 0 auto !important;
+      max-width: 720px !important;
+      width: 100% !important;
+    }
+
+    /* Título limitado en ancho para que rompa en 2 líneas */
+    #shopify-section-{{ section.id }} .product-block--header.om-header-top .product-single__title {
+      max-width: 520px !important;
+      margin: 0 auto !important;
+      line-height: 1.2 !important;
+    }
+  }
 {% endstyle %}
 
 {%- render 'product-template',
