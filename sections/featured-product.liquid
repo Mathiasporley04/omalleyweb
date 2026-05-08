@@ -35,6 +35,9 @@
 
   /* Hide del botón de lupita (pero PhotoSwipe sigue activo en .photoswipe__image) */
   #shopify-section-{{ section.id }} .product__photo-zoom { display: none !important; }
+
+  /* Ocultar precio en el featured-product */
+  #shopify-section-{{ section.id }} .product-block--price { display: none !important; }
 {% endstyle %}
 
 {%- render 'product-template',
