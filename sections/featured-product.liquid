@@ -1,17 +1,50 @@
 {%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
 
+{%- assign product = all_products[section.settings.featured_product] -%}
+
 {% style %}
   #shopify-section-{{ section.id }} .product__price {
-    font-size: 32px !important;
+    font-size: 42px !important;
     font-weight: 800 !important;
     letter-spacing: -0.01em !important;
+    line-height: 1.1 !important;
   }
   @media (max-width: 768px) {
-    #shopify-section-{{ section.id }} .product__price { font-size: 26px !important; }
+    #shopify-section-{{ section.id }} .product__price { font-size: 32px !important; }
+  }
+
+  /* Price encima del título via flex order en el meta wrapper */
+  #shopify-section-{{ section.id }} .product-single__meta {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  #shopify-section-{{ section.id }} .product-single__meta [data-product-blocks] { order: 1 !important; }
+  #shopify-section-{{ section.id }} .product-single__meta .product-block--header { order: 2 !important; }
+
+  /* Título clickeable, sin underline ni cambio de color */
+  #shopify-section-{{ section.id }} .product-single__title a,
+  #shopify-section-{{ section.id }} .product-single__title a:hover,
+  #shopify-section-{{ section.id }} .product-single__title a:focus {
+    color: inherit !important;
+    text-decoration: none !important;
   }
 {% endstyle %}
 
-{%- assign product = all_products[section.settings.featured_product] -%}
+<script>
+  (function () {
+    var section = document.getElementById('shopify-section-{{ section.id }}');
+    if (!section) return;
+    var title = section.querySelector('.product-single__title');
+    if (!title || title.querySelector('a')) return;
+    var url = {{ product.url | json }};
+    if (!url) return;
+    var link = document.createElement('a');
+    link.href = url;
+    while (title.firstChild) link.appendChild(title.firstChild);
+    title.appendChild(link);
+  })();
+</script>
+
 {%- render 'product-template',
   product: product,
   section_id: section.id,
