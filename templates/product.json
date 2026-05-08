@@ -253,7 +253,7 @@
             "corner_styling": "soft",
             "header_text_color": "#000000",
             "text_color": "#000000",
-            "card_color": "#F9F9F9",
+            "card_color": "#f9f9f9",
             "stars_color": "",
             "arrows_color": "#000000",
             "transition_speed": 5,
@@ -264,6 +264,27 @@
       },
       "block_order": [
         "judge_me_reviews_cards_carousel_hALTt4"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "1778221222fff3d859": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_LHGqED": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_LHGqED"
       ],
       "settings": {
         "full_width": false,
@@ -283,6 +304,7 @@
     "recently-viewed",
     "collection-return",
     "loox-product-reviews-app-section",
-    "177822093055b0cdeb"
+    "177822093055b0cdeb",
+    "1778221222fff3d859"
   ]
 }
