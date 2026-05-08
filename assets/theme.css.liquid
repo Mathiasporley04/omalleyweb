@@ -11781,23 +11781,27 @@ html[dir=rtl] .product-single__meta .rte{
   }
 }
 
-/* Cerrar el gap entre la imagen "CONFIANZA EN CADA ENVÍO" y el carousel "Lo que dicen" en producto.
-   En medio hay 2 secciones apps (Loox sin configurar + otra vacía) que renderizan wrappers con padding. */
-#shopify-section-1778107452eb4d1233 {
+/* Cerrar el gap entre "CONFIANZA EN CADA ENVÍO" (Imagen simple) y "Lo que dicen" (Cards Carousel) en producto.
+   En HTML los IDs llevan prefijo template--XXXXX__, uso suffix matchers.
+   Entre ellas hay 3 secciones vacías: apps + collection-return (sin collection actual) + loox vacío,
+   cada una con .index-section que mete padding vertical de Impulse. */
+[id$="__17781042648effaa4b"]:has(.page-width:empty),
+[id$="__loox-product-reviews-app-section"]:has(.page-width:empty),
+[id$="__1778221222fff3d859"]:has(.page-width:empty) {
+  display: none !important;
+}
+[id$="__collection-return"]:not(:has(.btn)) {
+  display: none !important;
+}
+[id$="__1778107452eb4d1233"],
+[id$="__1778107452eb4d1233"] .index-section,
+[id$="__1778107452eb4d1233"] .page-width {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
-#shopify-section-17781042648effaa4b,
-#shopify-section-loox-product-reviews-app-section {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-#shopify-section-17781042648effaa4b > *,
-#shopify-section-loox-product-reviews-app-section > * {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-#shopify-section-177822093055b0cdeb {
+[id$="__177822093055b0cdeb"],
+[id$="__177822093055b0cdeb"] .index-section,
+[id$="__177822093055b0cdeb"] .page-width {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
