@@ -9361,6 +9361,32 @@ p.footer__small-text { transform: translateY(-10px); }
 @media only screen and (min-width: 769px) {
   footer.site-footer { padding-bottom: 0 !important; }
 }
+
+/* Hero/slideshow: matar la demora de las animaciones de entrada (texto + imagen) */
+.hero__text-wrap .animation-cropper,
+.hero__text-wrap .animation-contents,
+.slideshow__slide .animation-cropper,
+.slideshow__slide .animation-contents,
+[data-aos="hero__animation"] .animation-cropper,
+[data-aos="hero__animation"] .animation-contents {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+.slideshow__slide .hero__link .btn,
+[data-aos="hero__animation"] .hero__link .btn {
+  opacity: 1 !important;
+  animation: none !important;
+}
+.slideshow__slide .hero__image,
+.slideshow__slide .hero__image-wrapper,
+[data-aos="hero__animation"] .hero__image,
+[data-aos="hero__animation"] .hero__image-wrapper {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
 .header-item--logo,
 .header-item--logo a,
 .site-header__logo,
