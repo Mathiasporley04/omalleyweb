@@ -73,7 +73,7 @@
       }
 
       // Click en las imágenes del slideshow → producto (sin wrap para no romper Flickity)
-      var slides = section.querySelectorAll('.product__main-photos [data-product-single-media-wrapper], .product__main-photos .product__photo, .product__main-photos .image-wrap');
+      var slides = section.querySelectorAll('.product__main-photos .product-main-slide, .product__main-photos .image-wrap');
       var dragged = false;
       slides.forEach(function (slide) {
         slide.style.cursor = 'pointer';
