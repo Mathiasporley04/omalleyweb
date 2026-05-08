@@ -133,7 +133,7 @@
             "settings": {
               "show_footer_title": true,
               "title": "Atención al Cliente",
-              "text": "<p><strong>Email: </strong>soporte@omalley.uy<br/><strong>Celular:</strong> 099530581</p><p><strong>Pick UP<br/></strong>Lunes a Viernes: 13:00 a 18:00 hs.</p>",
+              "text": "<p><strong>Email: </strong>soporte@omalley.uy<br/><strong>WhatsApp:</strong> 099530581</p><p><strong>Pick UP<br/></strong>Lunes a Viernes: 13:00 a 18:00 hs.</p>",
               "container_width": 33
             }
           },
