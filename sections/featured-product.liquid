@@ -39,6 +39,12 @@
   /* Ocultar precio en el featured-product */
   #shopify-section-{{ section.id }} .product-block--price { display: none !important; }
 
+  /* Sacar padding vertical de la sección de producto */
+  #shopify-section-{{ section.id }} .page-content.page-content--product {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
   /* Desktop: centrar el producto + título en 2 líneas */
   @media (min-width: 769px) {
     /* Esconder la columna derecha (queda vacía con el precio oculto) */
