@@ -62,7 +62,7 @@
         "sku_enable": false,
         "image_position": "left",
         "image_size": "small",
-        "product_zoom_enable": false,
+        "product_zoom_enable": true,
         "thumbnail_position": "beside",
         "thumbnail_arrows": false,
         "mobile_layout": "partial",

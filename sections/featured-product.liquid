@@ -21,19 +21,16 @@
   #shopify-section-{{ section.id }} .product-single__meta [data-product-blocks] { order: 1 !important; }
   #shopify-section-{{ section.id }} .product-single__meta .product-block--header { order: 2 !important; }
 
-  /* Título y slides clickeables, sin underline ni cambio de color */
+  /* Título clickeable, sin underline ni cambio de color */
   #shopify-section-{{ section.id }} .product-single__title a,
   #shopify-section-{{ section.id }} .product-single__title a:hover,
-  #shopify-section-{{ section.id }} .product-single__title a:focus,
-  #shopify-section-{{ section.id }} .product__main-photos a,
-  #shopify-section-{{ section.id }} .product__main-photos a:hover {
+  #shopify-section-{{ section.id }} .product-single__title a:focus {
     color: inherit !important;
     text-decoration: none !important;
     cursor: pointer;
   }
-  #shopify-section-{{ section.id }} .product__main-photos a { display: block; }
 
-  /* Hide del botón de zoom (defensivo, por si caché de Shopify aún sirve la versión vieja) */
+  /* Hide del botón de lupita (pero PhotoSwipe sigue activo en .photoswipe__image) */
   #shopify-section-{{ section.id }} .product__photo-zoom { display: none !important; }
 {% endstyle %}
 
@@ -44,7 +41,7 @@
 
   image_position: section.settings.image_position,
   image_container_width: section.settings.image_size,
-  product_zoom_enable: false,
+  product_zoom_enable: section.settings.product_zoom_enable,
   sku_enable: section.settings.sku_enable,
   thumbnail_position: section.settings.thumbnail_position,
   thumbnail_arrows: section.settings.thumbnail_arrows,
@@ -72,21 +69,6 @@
         title.appendChild(titleLink);
       }
 
-      // Click en las imágenes del slideshow → producto (sin wrap para no romper Flickity)
-      var slides = section.querySelectorAll('.product__main-photos .product-main-slide, .product__main-photos .image-wrap');
-      var dragged = false;
-      slides.forEach(function (slide) {
-        slide.style.cursor = 'pointer';
-        slide.addEventListener('mousedown', function () { dragged = false; });
-        slide.addEventListener('mousemove', function (e) { if (e.buttons) dragged = true; });
-        slide.addEventListener('touchstart', function () { dragged = false; }, { passive: true });
-        slide.addEventListener('touchmove', function () { dragged = true; }, { passive: true });
-        slide.addEventListener('click', function (e) {
-          if (dragged) { dragged = false; return; }
-          if (e.target.closest('button, a, input, select')) return;
-          window.location.href = productUrl;
-        });
-      });
     }
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', init);
