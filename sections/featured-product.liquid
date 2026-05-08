@@ -1,5 +1,16 @@
 {%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
 
+{% style %}
+  #shopify-section-{{ section.id }} .product__price {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.01em !important;
+  }
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .product__price { font-size: 26px !important; }
+  }
+{% endstyle %}
+
 {%- assign product = all_products[section.settings.featured_product] -%}
 {%- render 'product-template',
   product: product,
@@ -331,7 +342,7 @@
       "type": "text",
       "id": "text",
       "label": "t:product_block.sales_point.settings.text.label",
-      "default": "Free worldwide shipping"
+      "default": "Envío gratis a todo el mundo"
     }
   ]
 },
@@ -342,7 +353,7 @@
     {
       "type": "text",
       "id": "text",
-      "default": "Text block",
+      "default": "Bloque de texto",
       "label": "t:product_block.text.settings.text.label"
     }
   ]
@@ -366,13 +377,13 @@
       "type": "text",
       "id": "title",
       "label": "t:product_block.tab.settings.title.label",
-      "default": "Shipping information"
+      "default": "Información de envío"
     },
     {
       "type": "richtext",
       "id": "content",
       "label": "t:product_block.tab.settings.content.label",
-      "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
+      "default": "<p>Usá pestañas plegables para información más detallada que ayude a tus clientes a tomar decisiones de compra.</p><p>Ej.: políticas de envío y devolución, guías de talles y otras preguntas comunes.</p>"
     },
     {
       "type": "page",
@@ -409,7 +420,7 @@
       "type": "text",
       "id": "title",
       "label": "t:product_block.contact_form.settings.title.label",
-      "default": "Ask a question"
+      "default": "Hacé una pregunta"
     },
     {
       "type": "checkbox",
@@ -426,7 +437,7 @@
       "type": "liquid",
       "id": "code",
       "label": "t:product_block.html.settings.code.label",
-      "default": "<h4>Custom code block</h4><p>Use this advanced section to add custom HTML, app scripts, or liquid.</p>",
+      "default": "<h4>Bloque de código personalizado</h4><p>Usá esta sección avanzada para agregar HTML, scripts de apps o liquid personalizados.</p>",
       "info": "t:product_block.html.settings.code.info"
     }
   ]
