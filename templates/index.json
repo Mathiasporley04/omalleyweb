@@ -82,11 +82,19 @@
         "view_all": false,
         "divider": false
       }
+    },
+    "177822241018647e8f": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
     "slideshow",
     "featured_product_NyriLr",
-    "featured_collection_cJn4za"
+    "featured_collection_cJn4za",
+    "177822241018647e8f"
   ]
 }
