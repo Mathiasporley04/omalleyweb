@@ -256,7 +256,7 @@
             "card_color": "#f9f9f9",
             "stars_color": "#000000",
             "arrows_color": "#000000",
-            "transition_speed": 1,
+            "transition_speed": 2,
             "header_text": "Lo que dicen nuestros clientes",
             "show_average_rating": true
           }
