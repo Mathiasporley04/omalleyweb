@@ -69,6 +69,20 @@
         title.appendChild(titleLink);
       }
 
+      // PhotoSwipe se bindea solo al botón .js-photoswipe__zoom (theme.js:5287). Como
+      // el botón está oculto via CSS, replico el click desde la <img> al botón hermano
+      // del mismo .image-wrap. Así tocar la foto abre el zoom igual que en el producto.
+      section.querySelectorAll('.image-wrap').forEach(function (wrap) {
+        var img = wrap.querySelector('.photoswipe__image');
+        var trigger = wrap.querySelector('.js-photoswipe__zoom');
+        if (!img || !trigger || img.dataset.omClickBound) return;
+        img.dataset.omClickBound = '1';
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function (e) {
+          if (e.target.closest('a, button')) return;
+          trigger.click();
+        });
+      });
     }
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', init);
